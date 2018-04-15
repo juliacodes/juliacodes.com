@@ -5,20 +5,23 @@
 		<style>
 			body {
 				font-family: 'Nixie One', cursive;
-
+				
 			}
+			
 			img {
 				top: 50%;
 				left: 50%;
+				margin-top: -240px;
 				margin-left: -250px;
-				margin-top: -300px;
 				position: fixed;
-				width: 30%;
+				width: 500px;
 			}
 			
 			.circle1 {
-				top: 10%;
+				margin-top: -500px;
+				margin-left: 30px;
 				left: 50%;
+				top: 50%;
 				position: fixed;
 		  		height: 400px;
 				width: 400px;
@@ -28,10 +31,8 @@
 			}
 			
 			.circle1:hover {
-				top: 8%;
-				left: 48%;
-				height: 500px;
-				width: 500px;
+				
+				transform: scale(1.5);
 				transition-duration: 2s;
 				
 				
@@ -39,20 +40,23 @@
 			
 			.about {
 				position: fixed;
-				top: 27%;
-				left: 57.5%;
+				margin-top: -320px;
+				margin-left: 170px;
+				top: 50%;
+				left: 50%;
+				
 				font-size: 30px;
 				color: white;
+				pointer-events: none;
 			}
 			
-			#circle1:hover .about {
-				transition-duration: 2s;
-			
-			}
+		
 			
 			.circle2 {
-				top: 58%;
-				left: 55%;
+				top: 50%;
+				left: 50%;
+				margin-top: 100px;
+				margin-left: 100px;
 				position: fixed;
 		  		height: 225px;
 				width: 225px;
@@ -62,31 +66,31 @@
 			}
 			
 			.circle2:hover {
-				top: 54%;
-				left: 53%;
-				height: 325px;
-				width: 325px;
+
+				transform: scale(1.5);
 				transition-duration: 2s;
-				
 			}
 			
 			.social {
+				pointer-events: none;
+				margin-top: 190px;
+				margin-left: 150px;
 				z-index: 1;
 				position: fixed;
-				top: 66.5%;
-				left: 58%;
+				top: 50%;
+				left: 50%;
 				font-size: 30px;
 				color: white;
 			}
 			
-			#circle2:hover .social {
-				transition-duration: 2s;
-			}
+		
 			
 			.circle3 {
 				z-index: -1;
-				top: 48%;
-				left: 23%;
+				top: 50%;
+				left: 50%;
+				margin-left: -500px;
+				margin-top: 40px;
 				position: fixed;
 		  		height: 400px;
 				width: 400px;
@@ -96,32 +100,32 @@
 			}
 			
 			.circle3:hover {
-				top: 45%;
-				left: 20%;
-				height: 500px;
-				width: 500px;
+			
+				transform: scale(1.5);
 				transition-duration: 2s;
 				
 			}
 			
 			.projects {
+				pointer-events: none;
 				z-index: 1;
 				position: fixed;
-				top: 63.5%;
-				left: 29%;
+				margin-top: 200px;
+				margin-left: -390px;
+				top: 50%;
+				left: 50%;
 				font-size: 30px;
 				color: white;
 			}
 			
-			#circle3:hover .projects {
-
-				transition-duration: 2s;
-			}
+	
 			
 			.circle4 {
 				z-index: -1;
-				top: 40%;
-				left: 22%;
+				top: 50%;
+				left: 50%;
+				margin-top: -50px;
+				margin-left: -570px;
 				position: fixed;
 		  		height: 180px;
 				width: 180px;
@@ -131,35 +135,40 @@
 			}
 			
 			.circle4:hover {
-				top: 35%;
-				left: 19%;
-				height: 280px;
-				width: 280px;
+
+				transform: scale(1.5);
 				transition-duration: 2s;
 				
 			}
 			
 			.resume {
+				pointer-events: none;
 				z-index: 1;
 				position: fixed;
-				top: 46.5%;
-				left: 23%;
+				margin-top: 20px;
+				margin-left: -545px;
+				top: 50%;
+				left: 50%;
 				font-size: 30px;
 				color: white;
 			}
 			
-			#circle4:hover .resume {
-				transition-duration: 3s;
+			.resume:hover .circle4 {
+					transform: scale(1.5);
+				transition-duration: 2s;
 			}
 		
-			
+			#circle4{
+				color: purple;
+			}
 			
 			
 		</style>
 	</head>
 	<body>
-		<img src="http://juliacodes.com/me.png">
-		
+		<a href =".">
+		<img src="/Users/juliajohnson/Desktop/me.png">
+		</a>
 		<a href="juliacodes.com/about">
 		<div id= "circle1">
 				<div class="circle1"></div>
@@ -183,14 +192,13 @@
 			
 		<a href="juliacodes.com/resume">
 		<div id= "circle4">
-			<div class="circle4"></div>
 			<div class="resume">RESUMÉ</div>
+			<div class="circle4"></div>
+			
 		</div>
 		</a>
 		
 
-
-		
 		<script>
 		</script>
 	</body>
