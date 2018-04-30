@@ -1,205 +1,631 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<link href="https://fonts.googleapis.com/css?family=Nixie+One" rel="stylesheet">
+<script type="text/javascript" src="http://code.jquery.com/jquery-1.4.2.min.js"></script>
+
 		<style>
 			body {
-				font-family: 'Nixie One', cursive;
+				font-family: avenir;
+				background-color: #FBFBFB;
 				
 			}
 			
-			img {
-				top: 50%;
-				left: 50%;
-				margin-top: -240px;
-				margin-left: -250px;
-				position: fixed;
-				width: 500px;
+			a {
+				text-decoration-line: none;
+				color: #fbfbfb;
 			}
 			
-			.circle1 {
-				margin-top: -500px;
-				margin-left: 30px;
-				left: 50%;
-				top: 50%;
-				position: fixed;
-		  		height: 400px;
-				width: 400px;
-				background: rgb(255, 102, 102);
-				border-radius: 100%;
-				z-index: -1;
+			a:hover {
+				color: black;
 			}
 			
-			.circle1:hover {
-				
-				transform: scale(1.5);
-				transition-duration: 2s;
-				
-				
+			
+			hr{
+				border-color: #67A1F4;
 			}
 			
-			.about {
-				position: fixed;
-				margin-top: -320px;
-				margin-left: 170px;
-				top: 50%;
-				left: 50%;
+			header {
+			
+			}
+			
+			h2 {
+				margin-top: 30px;
+				margin-left: 40px;
+				font-size: 50px;
+			}
+			
+			h4 {
+			padding-top: 30px;
+			text-align: center;
+			}
+			
+			h6 {
+			opacity: 0;
+			font-size: 1.5px;
+			margin-top: -50px;
+			margin-left: 8px;
+			}
+		
+			.headline {
 				
-				font-size: 30px;
-				color: white;
+				width: 70%;
 				pointer-events: none;
+    			display: block;
+				margin-left: auto;
+				margin-right: auto;
+				margin-top: 45vh;
+				margin-bottom: 50vh;
 			}
 			
+			.link1 {
+				
+				top:0;
+				position: absolute;
+				right: 1%;
+				
+				background-color: #67A1F4;
+				width: 95px;
+ 	 			height: 300px;
+  				padding-top: 15px;
+  				margin-top: -220px;
+				color: #fbfbfb;
+				font-size: 11px;
+				letter-spacing: 0.2em;
+				text-align: center;
+				text-transform: uppercase;
+			}
+			
+			.link1:after {
+				 content: "";
+				 position: absolute;
+				 left: 0;
+				 bottom: 0;
+				 width: 0;
+				 height: 0;
+				 border-bottom: 13px solid #fbfbfb;
+				 border-left: 47.5px solid transparent;
+				 border-right: 47.5px solid transparent;
+			}
+			
+			
+			.link1:hover {
+			
+				top:200px;
+				transition-duration: 2s;
+			}
+			.page2 {
+				display: flex;
+				margin: 20px;
+				margin-left: 20px;
+				
+			}
+			
+			.page4 {
+				
+				
+			}
+			
+			.circle {
+				position:sticky;
+				width: 80px;
+				height: 80px;
+				background: #67A1F4;
+				-moz-border-radius: 50px;
+				-webkit-border-radius: 50px;
+				border-radius: 50px;
+				margin-top: 0px;
+				margin-bottom: 30px;
+				left: 90%;
+			}
+			
+			.circle:hover {
+				
+				transform: scale(20);
+				transition-duration: 2s;
+			}
+			
+			.circle:hover h4{
+				opacity: 0;
+				transition-duration: 1s;
+			}
+			
+			.circle:hover h6{
+				opacity:1;
+				
+				transition-duration: s;
+			}
 		
 			
-			.circle2 {
-				top: 50%;
-				left: 50%;
-				margin-top: 100px;
-				margin-left: 100px;
-				position: fixed;
-		  		height: 225px;
-				width: 225px;
-		  		background-color: #66CCCC;
-				border-radius: 100%;
-				
+			column {
+		
+				flex: 50%;
 			}
 			
-			.circle2:hover {
+			h5 {
+				font-size: 15px;
+				font-family: avenir;
+				align-content: left;
+				padding: 40px;
+				margin: 10px;
+				font-weight: normal;
+			}
 
-				transform: scale(1.5);
-				transition-duration: 2s;
-			}
-			
-			.social {
-				pointer-events: none;
-				margin-top: 190px;
-				margin-left: 150px;
-				z-index: 1;
-				position: fixed;
-				top: 50%;
-				left: 50%;
-				font-size: 30px;
-				color: white;
-			}
-			
-		
-			
-			.circle3 {
-				z-index: -1;
-				top: 50%;
-				left: 50%;
-				margin-left: -500px;
-				margin-top: 40px;
-				position: fixed;
-		  		height: 400px;
-				width: 400px;
-		  		background-color: #FFCC66;
-				border-radius: 100%;
+			h1 {
 				
+				padding-left:30px;
+				padding-bottom: -10px;
+			}
+			.me {
+				width: 90%;
+				margin-right:0px;
+				margin-top: 2px;
+				margin-bottom: 0;
 			}
 			
-			.circle3:hover {
 			
-				transform: scale(1.5);
-				transition-duration: 2s;
+			
+			.hideme{
 				
+    			opacity:0;
+				width: 90%;
+				margin-left:30px;
+				margin-right:0px;
+				margin-top: -30px;
+				margin-bottom: 10px;
 			}
 			
-			.projects {
-				pointer-events: none;
-				z-index: 1;
-				position: fixed;
-				margin-top: 200px;
-				margin-left: -390px;
-				top: 50%;
-				left: 50%;
-				font-size: 30px;
-				color: white;
+			.experience{
+				width: 90%;
+				margin-left: 45px;
+				margin-right:45px;
+				margin-top: 70px;
+				margin-bottom: 45px;
+				opacity: 0;
+
+			}
+
+		#portfolio {  
+
+    margin: 1rem 0;
+    -webkit-column-count: 3; 
+    -moz-column-count: 3;
+    column-count: 3;
+    -webkit-column-gap: 1rem;
+    -moz-column-gap: 1rem;
+    column-gap: 1rem;
+    -webkit-column-width: 33.33333333333333%;
+    -moz-column-width: 33.33333333333333%;
+    column-width: 33.33333333333333%;
+}
+			
+			
+.tile { 
+    -webkit-transform: scale(0);
+    transform: scale(0);
+    -webkit-transition: all 350ms ease;
+    transition: all 350ms ease;
+
+}
+.tile:hover { 
+ filter: blur(3rem;);
+
+}
+
+.scale-anm {
+  transform: scale(1);
+}
+
+
+p{ 
+  padding:10px; 
+  border-bottom: 1px #ccc dotted; 
+  text-decoration: none; 
+  font-family: avenir; 
+  text-transform:uppercase; 
+  font-size: 12px; 
+  color: white;
+  display:block; 
+  float:left;
+}
+
+p:hover { 
+  cursor:pointer; 
+  background: #333; 
+  color:#eee;
+
 			}
 			
+
+.tile img {
+    max-width: 100%;
+    width: 100%;
+    height: auto;
+    margin-bottom: 1rem;
+  
+}
+
+.btn {
+	border-radius: 3px;
+   	text-align: center;
+    font-size: 1.25rem;
+    font-weight: normal;
+    text-decoration: none;
+    cursor: pointer;
+    display: inline-block;
+    line-height: normal;
+    padding: .5rem 1rem;
+    margin-left: 100px;
+    height: auto;
+    width: 300px;
+    vertical-align: right;;
+    -webkit-appearance: none;
+    color: #555;
+    background-color: rgba(0, 0, 0, 0);
+}
+
+.btn:hover {
+
+}
+
+.btn:focus {
+  outline: none;
+  border-color: var(--darken-2);
+  box-shadow: 0 0 0 3px var(--darken-3);
+}
+
+::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
 	
-			
-			.circle4 {
-				z-index: -1;
-				top: 50%;
-				left: 50%;
-				margin-top: -50px;
-				margin-left: -570px;
-				position: fixed;
-		  		height: 180px;
-				width: 180px;
-		  		background-color: #336666;
-				border-radius: 100%;
-				
-			}
-			
-			.circle4:hover {
-
-				transform: scale(1.5);
-				transition-duration: 2s;
-				
-			}
-			
-			.resume {
-				pointer-events: none;
-				z-index: 1;
-				position: fixed;
-				margin-top: 20px;
-				margin-left: -545px;
-				top: 50%;
-				left: 50%;
-				font-size: 30px;
-				color: white;
-			}
-			
-			.resume:hover .circle4 {
-					transform: scale(1.5);
-				transition-duration: 2s;
-			}
 		
-			#circle4{
-				color: purple;
+		
+		
+.wrapper-dropdown-1 {
+    /* Size and position */
+    position: relative; /* Enable absolute positionning for children and pseudo elements */
+    width: 350px;
+    padding: 10px;
+    margin: 40px auto;
+	text-align: left;
+	margin-left: 20px;
+    /* Styles */
+
+    color: Black;
+    outline: none;
+    cursor: pointer;
+
+    /* Font settings */
+    font-size: 30px;
+}
+
+.wrapper-dropdown-1:after {
+    content: "";
+    width: 0;
+    height: 0;
+	
+    position: absolute;
+    right: -20px;
+    top: 50%;
+    margin-top: -8px;
+    border-width: 13px 13px 13px 0;
+	 transform: rotate(deg);
+    -webkit-transform: rotate(deg);
+    border-style: solid;
+    border-color: transparent #67A1F4;   
+	z-index: 1;
+}
+			
+
+.wrapper-dropdown-1 .dropdown {
+	background-color: transparent black;
+    /* Size & position */
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+
+    /* Styles */
+    
+    list-style: none;
+    font-weight: normal; /* Cancels previous font-weight: bold; */
+
+    /* Hiding */
+    opacity: 0;
+    pointer-events: none;
+	z-index: 1;
+}
+
+.wrapper-dropdown-1 .dropdown li a {
+	background-color: #67A1F4;
+	opacity: 0.75;
+	filter: blur(3px;);
+    display: block;
+    text-decoration: none;
+    color: black;
+    right: 40px;
+	padding: 30px 20px;
+	z-index: 1;
+}
+
+/* Hover state */
+.wrapper-dropdown-1 .dropdown li:hover a {
+    background: #fbfbfb;
+	transition-duration: 1s;
+	z-index: 1;
+		filter: blur(.1rem);
+}
+
+/* Active state */
+.wrapper-dropdown-1.active .dropdown {
+    opacity: 1;
+    pointer-events: auto;
+	z-index: 1;
+}
+
+.wrapper-dropdown-1.active:after {
+margin-top: -10px;
+	 transform: rotate(-90deg);
+    -webkit-transform: rotate(-90deg);
+	border-color: transparent #67A1F4;
+	transition-duration: 2s;
+   
+
+}
+
+.wrapper-dropdown-1.active {
+  
 			}
-			
-			
+
+/* No CSS3 support */
+
+.no-opacity       .wrapper-dropdown-1 .dropdown,
+.no-pointerevents .wrapper-dropdown-1 .dropdown {
+    display: none;
+    opacity: 1; /* If opacity support but no pointer-events support */
+    pointer-events: auto; /* If pointer-events support but no pointer-events support */
+}
+
+.no-opacity       .wrapper-dropdown-1.active .dropdown,
+.no-pointerevents .wrapper-dropdown-1.active .dropdown {
+    display: block;
+}
 		</style>
 	</head>
-	<body>
-		<a href =".">
-		<img src="https://raw.githubusercontent.com/juliajohnson18/juliacodes.com/master/me.png">
-		</a>
-		<a href="http://juliacodes.com/about.html">
-		<div id= "circle1">
-				<div class="circle1"></div>
-			<div class="about" href="juliacodes.com/about">ABOUT</div> 
-		</div>
-		</a>
+		<body>
+			<header>
+				<div class="link1"><p>about</p><p>work</p><p>contact</p></div>
+				<img class ="headline"src="/Users/juliajohnson/Desktop/Personal/websites 2/anim 2_2.gif">
 			
-		<a href="http://juliacodes.com/juliacodes.com/social">
-		<div id= "circle2">
-			<div class="circle2"></div>
-			<div class="social">SOCIAL</div>
-		</div>
-		</a>
+			</header>
+			<div class ="page2">
+				<div class="column">
+					<h1>About Me</h1>
+					<hr>
+					<h5>Very few activities seem to give me the satisfaction that creating and completing a new design does. Whether it be within Adobe Illustrator or programming in CSS, a new challenge or project is what fuels my passion for design. 
+My background is mostly as a self taught designer and programmer up to this last year. Now that I have more formal education within web design, I feel that my abilities have really matured.
+When in comes to team experiences, I worked alongside other interns for Abbott Laboratory’s Women in STEM program. This program allowed me to work as a leader amongst my peers in a real business situation. </h5>
+				
+				</div>
+				<div class="column" style="background-color: #fbfbfb">
+					<img class="hideme '" src="/Users/juliajohnson/Desktop/882EEBA7-AFD7-4B1A-9CDB-A2448B756DD2.png">
+					
+				</div>
+			</div>
+			
+						
+			<div class ="page3">
+					<img class="experience" src="/Users/juliajohnson/Desktop/Portfolio/experience.png">
+			</div>
+			
+			 <div class="container">
 		
-		<a href="http://juliacodes.com/juliacodes.com/projects">
-		<div id= "circle3">
-			<div class="circle3"></div>
-			<div class="projects">PROJECTS</div>
-		</div>
-		</a>	
+		
+			<h1>My Designs</h1>
+				 <hr>
 			
-		<a href="juliacodes.com/resume">
-		<div id= "circle4">
-			<div class="resume">RESUMÉ</div>
-			<div class="circle4"></div>
+			<section class="main">
+				<div class="wrapper-demo">
+					<div id="dd" class="wrapper-dropdown-1" tabindex="1">
+						<span>Let's See</span>
+					    <ul class="dropdown" tabindex="1">
+					        <li><a class="btn fil-cat" data-rel="all"href="#">All Designs</a></li>
+					        <li><a class="btn fil-cat" data-rel="web"href="#">Web Design</a></li>
+							<li><a class="btn fil-cat" data-rel="flyers"href="#">Illustrations</a></li>
+							<li><a class="btn fil-cat" data-rel="bcards"href="#">Animations</a></li>
+					    </ul>
+					</div>
+				​</div>
+			</section>
 			
-		</div>
-		</a>
+        </div>
+
+ 
+<div style="clear:both;"></div>   
+<div id="portfolio">
+  <div class="tile scale-anm web all">
+        <img src="http://demo.themerain.com/charm/wp-content/uploads/2015/04/2-mon_1092-300x234.jpg" alt="" />
+  </div>
+  <div class="tile scale-anm bcards all">
+    <img class="thisisme", src="/Users/juliajohnson/Desktop/882EEBA7-AFD7-4B1A-9CDB-A2448B756DD2.png" alt="" />
+  </div>
+  <div class="tile scale-anm web all">
+    <img src="http://demo.themerain.com/charm/wp-content/uploads/2015/04/emi_haze-300x201.jpg" alt="" />
+  </div>
+  <div class="tile scale-anm web all">
+            <img src="http://demo.themerain.com/charm/wp-content/uploads/2015/04/codystretch-300x270.jpg" alt="" />
+  </div>
+  <div class="tile scale-anm flyers all">
+        <img src="https://placeholdit.imgix.net/~text?txtsize=33&txt=350%C3%97190&w=350&h=190" alt="" />
+  </div>
+  <div class="tile scale-anm bcards all">
+            <img src="https://placeholdit.imgix.net/~text?txtsize=19&txt=200%C3%97290&w=200&h=290" alt="" />
+  </div>
+  <div class="tile scale-anm flyers all">
+    <img src="http://demo.themerain.com/charm/wp-content/uploads/2015/04/jti-icons_08-300x172.jpg" alt="" />
+  </div>
+  <div class="tile scale-anm flyers all">
+    <img src="http://demo.themerain.com/charm/wp-content/uploads/2015/04/transmission_01-300x300.jpg" alt="" />
+  </div>
+  <div class="tile scale-anm web all">
+        <img src="https://placeholdit.imgix.net/~text?txtsize=19&txt=200%C3%97290&w=200&h=290" alt="" />
+  </div>
+  <div class="tile scale-anm flyers all">
+           <img src="https://placeholdit.imgix.net/~text?txtsize=19&txt=200%C3%97290&w=200&h=290" alt="" /> 
+  </div>
+  <div class="tile scale-anm web all">
+        <img src="http://demo.themerain.com/charm/wp-content/uploads/2015/04/the-ninetys-brand_02-300x300.jpg" alt="" />
+  </div>
+  <div class="tile scale-anm bcards all">
+            <img src="http://demo.themerain.com/charm/wp-content/uploads/2015/04/15-dia_1092-1-300x300.jpg" alt="" />
+  </div>
+  <div class="tile scale-anm web all">
+       <img src="https://placeholdit.imgix.net/~text?txtsize=33&txt=350%C3%97190&w=350&h=190" alt="" /> 
+  </div>
+  <div class="tile scale-anm bcards all">
+          <img src="http://demo.themerain.com/charm/wp-content/uploads/2015/04/emi_haze-300x201.jpg" alt="" />  
+  </div>
+  <div class="tile scale-anm web all">
+            <img src="http://demo.themerain.com/charm/wp-content/uploads/2015/04/transmission_01-300x300.jpg" alt="" />
+  </div> 
+  <div class="tile scale-anm web all">
+      <img src="https://placeholdit.imgix.net/~text?txtsize=33&txt=350%C3%97190&w=350&h=190" alt="" />  
+  </div> 
+  <div class="tile scale-anm bcards all">     
+            <img src="https://placeholdit.imgix.net/~text?txtsize=19&txt=200%C3%97290&w=200&h=290" alt="" />
+  </div>
+</div>
+
+<div style="clear:both;"></div>   
+		
+			
+			
+
+			<h1>Contact</h1>
+	<hr>
+	
+
+			<h2>Hey! Now its your turn!</h2>
+		
 		
 
-		<script>
-		</script>
+
+			<div class="circle"><h4>hover me</h4><h6><a href="mailto:juliajohnson@purdue.edu">I'd love to hear from you! <br>juliajohnson@purdue.edu</a></h6></div>
+		
+
+			
+				<script>
+					
+					
+					
+					$(document).ready(function() {
+    
+    /* Every time the window is scrolled ... */
+    $(window).scroll( function(){
+    
+        /* Check the location of each desired element */
+        $('.hideme').each( function(i){
+            
+            var bottom_of_object = $(this).offset().top + $(this).outerHeight();
+            var bottom_of_window = $(window).scrollTop() + $(window).height();
+            
+            /* If the object is completely visible in the window, fade it it */
+            if( bottom_of_window > bottom_of_object ){
+               
+                $(this).animate({'opacity':'1', 'margin-top':'2px'},1500);
+			
+
+            }
+            
+        }); 
+		
+		
+		
+		     $('.experience').each( function(i){
+            
+            var bottom_of_object = $(this).offset().top + $(this).outerHeight();
+            var bottom_of_window = $(window).scrollTop() + $(window).height();
+            
+            /* If the object is completely visible in the window, fade it it */
+            if( bottom_of_window > bottom_of_object ){
+               
+                $(this).animate({'margin-top':'38px', 'opacity':'1'},1400);
+			
+
+            }
+            
+        });
+		
+	
+    });
+    
+});
+					
+					
+$(function() {
+		var selectedClass = "";
+		$(".fil-cat").click(function(){ 
+		selectedClass = $(this).attr("data-rel"); 
+     $("#portfolio").fadeTo(100, 0.1);
+		$("#portfolio div").not("."+selectedClass).fadeOut().removeClass('scale-anm');
+    setTimeout(function() {
+      $("."+selectedClass).fadeIn().addClass('scale-anm');
+      $("#portfolio").fadeTo(300, 1);
+    }, 300); 
+		
+	});
+});
+					
+					
+			</script>		
+					
+					
+					<!-- jQuery if needed -->
+        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+		<script type="text/javascript">
+			
+			function DropDown(el) {
+				this.dd = el;
+				this.placeholder = this.dd.children('span');
+				this.opts = this.dd.find('ul.dropdown > li');
+				this.val = '';
+				this.index = -1;
+				this.initEvents();
+			}
+			DropDown.prototype = {
+				initEvents : function() {
+					var obj = this;
+
+					obj.dd.on('click', function(event){
+						$(this).toggleClass('active');
+						return false;
+					});
+
+					obj.opts.on('click',function(){
+						var opt = $(this);
+						obj.val = opt.text();
+						obj.index = opt.index();
+						obj.placeholder.text("Let's See: " + obj.val);
+					});
+				},
+				getValue : function() {
+					return this.val;
+				},
+				getIndex : function() {
+					return this.index;
+				}
+			}
+
+			$(function() {
+
+				var dd = new DropDown( $('#dd') );
+
+				$(document).click(function() {
+					// all dropdowns
+					$('.wrapper-dropdown-1').removeClass('active');
+				});
+
+			});
+			</script>
 	</body>
 </html>
