@@ -90,7 +90,7 @@
 			}
 			
 			
-			.link1:hover, .link1:focus {
+			.link1:hover {
 			
 				top:200px;
 				transition-duration: 2s;
@@ -294,14 +294,14 @@ p:hover {
 .wrapper-dropdown-1 {
     /* Size and position */
     position: relative; /* Enable absolute positionning for children and pseudo elements */
-    width: 350px;
+    width: 320px;
     padding: 10px;
     margin: 40px auto;
 	text-align: left;
 	margin-left: 20px;
     /* Styles */
 
-    color: Black;
+    color: black;
     outline: none;
     cursor: pointer;
 
@@ -332,6 +332,7 @@ p:hover {
     /* Size & position */
     position: absolute;
     top: 100%;
+	
     left: 0;
     right: 0;
 
@@ -347,14 +348,16 @@ p:hover {
 }
 
 .wrapper-dropdown-1 .dropdown li a {
-	background-color: #67A1F4;
+	font-size: 25px;
+	text-align: left;
+	background-color: #fbfbfb;
 	opacity: 0.75;
 	filter: blur(3px;);
     display: block;
     text-decoration: none;
     color: black;
-    right: 40px;
-	padding: 30px 20px;
+    width: 150px;
+	padding:  10px -10px 30px;
 	z-index: 1;
 }
 
@@ -440,9 +443,9 @@ When in comes to team experiences, I worked alongside other interns for Abbott L
 			<section class="main">
 				<div class="wrapper-demo">
 					<div id="dd" class="wrapper-dropdown-1" tabindex="1">
-						<span>Let's See</span>
+						<span>Show Me: <u>All Designs</u></span>
 					    <ul class="dropdown" tabindex="1">
-					        <li><a class="btn fil-cat" data-rel="all"href="#">All Designs</a></li>
+							
 					        <li><a class="btn fil-cat" data-rel="web"href="#">Web Design</a></li>
 							<li><a class="btn fil-cat" data-rel="flyers"href="#">Illustrations</a></li>
 							<li><a class="btn fil-cat" data-rel="bcards"href="#">Animations</a></li>
@@ -456,7 +459,9 @@ When in comes to team experiences, I worked alongside other interns for Abbott L
  
 <div style="clear:both;"></div>   
 <div id="portfolio">
-  <div class="tile scale-anm flyers all"><a href ="/project1.html"><img src="https://raw.githubusercontent.com/juliajohnson18/juliacodes.com/master/proj4REV.png" alt="" />
+  <div class="tile scale-anm flyers all">
+      <a href ="project1.html" >
+	  <img src="/Users/juliajohnson/Desktop/design/Designs/proj4/proj4REV.png" alt="" />
 	  </a>
   </div>
   <div class="tile scale-anm bcards all">
@@ -619,7 +624,7 @@ $(function() {
 						var opt = $(this);
 						obj.val = opt.text();
 						obj.index = opt.index();
-						obj.placeholder.text("Let's See: " + obj.val);
+						obj.placeholder.text("Show Me: " + obj.val);
 					});
 				},
 				getValue : function() {
