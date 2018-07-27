@@ -8,6 +8,7 @@
                 
             }
             body {
+                align-content: center;
                 background-color: white;
             }
 
@@ -51,22 +52,53 @@
                 height: 100%;
             }
 
+@keyframes radial-pulse2 {
+        0% {
+          box-shadow: 0 0 0 0px rgba(234, 84, 121, .25);
+        }
+      
+        100% {
+          box-shadow: 0 0 0 40px rgba(0, 0, 0, 0);
+        }
+      }
             .right {
-                width: 50%;
+                width: 49%;
+                margin-left: 20px;
 		        float: left;
 		        height: 100%; 
                 background: #666469;
+                display: block;
             }
+            @keyframes radial-pulse {
+                
+        0% {
+          box-shadow: 0 0 0 0px rgba(121, 179, 230, .25);
+        }
+      
+        100% {
+          box-shadow: 0 0 0 40px rgba(0, 0, 0, 0);
+        }
+      }
 
             .left {
-                width: 50%;
+                width: 49%;
 		        float: left;
 		        background: white;
-                height: 100%;
+                height: 99%;
+                display: block;
+            }
+
+            .left:hover {
+                animation: radial-pulse 1.5s infinite;
+            }
+
+            .right:hover {
+                animation: radial-pulse2 1.5s infinite;
             }
 
             img {
-                margin-top: -10vh;
+                max-width: 400px;
+                margin-top: -10vw;
                 display: block;
                 margin-left: auto;
                 margin-right: auto;
@@ -78,6 +110,7 @@
                 font-weight: normal;
                 margin-top: 21vh;
                 text-align: center;
+                max-width: fo;
                 font-size: 7vw;
                 display: block;
                 transition-duration: 4s;
@@ -154,6 +187,17 @@
                 width: 2vw;
             }
 
+            .left-right-gone {
+                display: none;
+                transition-duration: 3s;
+                animation-duration: 3s;
+            }
+
+            .pick {
+                font-size: 1vw;
+                top: 93%;
+                position: absolute;
+            }
          
 
 
@@ -163,16 +207,20 @@
         <div id="container">
             <div id="header">
                <a href=""><h1>Julia Johnson</h1></a>
-                    <h3 onclick="work()">Work</h3></a>
-                    <a href=""><h3>About</h3></a>
+                    <a ><h3 onclick="work()">Work</h3></a>
+                    <a ><h3 onclick="social()">Social</h3></a>
                     <a href=""><h3>Contact</h3></a>  
             </div>
         </div>
         
         <div class="background">
-            <div onclick="developer()" class="left">
+
+            
+            <div id="left" onclick="developer()" class="left">
                 <h4 id="dev" style="color:#666469">DEVELOPER</h4>
                 <img id="dev2" src="https://raw.githubusercontent.com/juliajohnson18/juliacodes.com/master/Artboard%202.png">
+
+                <div> <h3 class="pick">Pick a side</h3></div>
                 <div class="none" id="dev_popup">
                     
                     <img class="icon" src="https://raw.githubusercontent.com/juliajohnson18/juliacodes.com/master/des.png">
@@ -194,7 +242,7 @@
                 
 
             </div>
-            <div onclick="designer()" class="right">
+            <div id="right" onclick="designer()" class="right">
                 <h4 id="des" style="color: #FAFDF7">DESIGNER</h4>
                 <img id="des2" src="https://raw.githubusercontent.com/juliajohnson18/juliacodes.com/master/Artboard%203.png">
                 <div class="none2" id="des_popup">
@@ -266,6 +314,16 @@
 
                 var element = document.getElementById("des2");
                 element.classList.toggle("desgone");
+            }
+
+
+            function social(){
+
+                var element = document.getElementById("left");
+                element.classList.toggle("left-right-gone");
+
+                var element = document.getElementById("right");
+                element.classList.toggle("left-right-gone");
             }
 
 
