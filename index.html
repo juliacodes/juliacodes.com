@@ -9,7 +9,9 @@
             }
             body {
                 align-content: center;
-                background-color: white;
+                padding: 0;
+                margin: 0;
+            
             }
 
             a:hover{
@@ -24,308 +26,227 @@
             }
 
             #header{
+                padding-top: 10px;
                 height: 0;
                 display: table-cell;
                 vertical-align: middle;
             }
+            
+            h1{
+                padding-top: 10vh;
+                text-align: center;
+            }    
 
-            h1, h3{
+
+            h3{
                 display: inline;
                 margin: 20px;
             }
 
-            h2 {
+            h2{
                 text-align: center;
+                font-weight: 200;
+                padding-bottom: 30px;
             }
 
-            #dev_popup p {
-                color: white;
-            }
 
-            p {
-                text-align: center;
-                font-size: 15px;
-                font-weight: 300;
+            .content {
+                top: 6vh;
+                height: 100vh;
+                position: relative;
             }
-
-            .background{
-                height: 100%;
-            }
-
-@keyframes radial-pulse2 {
-        0% {
-          box-shadow: 0 0 0 0px rgba(234, 84, 121, .25);
-        }
-      
-        100% {
-          box-shadow: 0 0 0 40px rgba(0, 0, 0, 0);
-        }
-      }
-            .right {
-                width: 49%;
-                margin-left: 20px;
-		        float: left;
-		        height: 100%; 
-                background: #666469;
-                display: block;
-            }
-            @keyframes radial-pulse {
-                
-        0% {
-          box-shadow: 0 0 0 0px rgba(121, 179, 230, .25);
-        }
-      
-        100% {
-          box-shadow: 0 0 0 40px rgba(0, 0, 0, 0);
-        }
-      }
-
-            .left {
-                width: 49%;
-		        float: left;
-		        background: white;
-                height: 99%;
-                display: block;
-            }
-
-            .left:hover {
-                animation: radial-pulse 1.5s infinite;
-            }
-
-            .right:hover {
-                animation: radial-pulse2 1.5s infinite;
-            }
-
             img {
-                max-width: 400px;
-                margin-top: -10vw;
+                align-content: center;
+                width: 40vh; 
+                padding: 30px;
                 display: block;
                 margin-left: auto;
                 margin-right: auto;
-                width: 20vw;
-                display: block;
-                transition-duration: 4s;
-            }
-            h4{ 
-                font-weight: normal;
-                margin-top: 21vh;
-                text-align: center;
-                max-width: fo;
-                font-size: 7vw;
-                display: block;
-                transition-duration: 4s;
             }
 
+            .about {
+                width: 100%;
+                padding: 0;
+                margin: 0;
+                background-color: #101630;
+                padding-bottom: 200px;
+            }
 
+            .center-about {
+                width: 70%;
+                display: block;
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            p{
+                letter-spacing: 1px;
+                line-height: 25px;
+            }
+
+            .skills{
+                width: 70%;
+                margin-top: -10vh;
+                display: block;
+                margin-left: auto;
+                margin-right: auto;
+                padding-bottom: 200px; 
+            }
+
+             .projects{
+                width: 50%;
+                display: block;
+                margin-left: auto;
+                margin-right: auto;
+                padding-bottom: 200px; 
+            }
+
+         
             
-            .none{
-                background: white;
-                margin-top: 10vh;
-                display: none;
-                width: 90%;
-                height: 80%;
-                padding: 30px;
-                transition-duration: 10s;
+            .column {
+       
+                padding: 20px;
+                margin: 20px;
+                -webkit-columns: 2 100px;
+                -moz-columns: 2 100px;
+                columns: 2 100px;
+                -webkit-column-gap: 3em;
+                -moz-column-gap: 3em;
+                column-gap: 3em;
+                -webkit-column-rule: 1px dotted #ddd;
+                -moz-column-rule: 1px dotted #ddd;
+                column-rule: 1px dotted #ddd;
+               
             }
 
-            .none2{
-                background: white;
-                margin-top: 10vh;
-                display: none;
-                width: 90%;
-                height: 80%;
-                padding: 30px;
-                transition-duration: 10s;
-            }
-
-            .off{
-                background: #666469;
-                margin-top: 10vh;
-                display: none;
-                width: 90%;
-                height: 80%;
-                padding: 30px;
-                transition-duration: 10s;
-            }
-
-            
-
-            .on {                
-                background: #666469;
-                margin-left: 3vw;
-                margin-right: 10vw;
-                margin-top: 10vh;
-                width: 80%;
-                height: 80%;
-                padding: 30px;
-                display: block;
-                transition-duration: 10s;
-            }
-
-
-            .on2 {                
-                background: white;
-                margin-left: 3vw;
-                margin-right: 10vw;
-                margin-top: 10vh;
-                width: 80%;
-                height: 80%;
-                padding: 30px;
-                display: block;
-                transition-duration: 10s;
-                overflow-y: scroll;
-            }
           
 
-            .devgone, .desgone {
-                display: none;
-                transition-duration: 4s;
+            .box {
+                border-radius: 20px;
+                background-color: white;
+                box-shadow: 3px 3px 15px 1px rgb(140, 140, 140, 0.4);
+                border: 1px solid #E6ECF8;
             }
 
             .icon {
-                margin-top: 10px;
-                width: 2vw;
+                width: 70px;
             }
 
-            .left-right-gone {
-                display: none;
-                transition-duration: 3s;
-                animation-duration: 3s;
-            }
+            .column2 {
+                
+           padding: 20px;
+           margin: 20px;
+           -webkit-columns: 3 200px;
+           -moz-columns: 3 200px;
+            columns: 3 200px;
+            -webkit-column-gap: 4em;
+           -moz-column-gap: 4em;
+           column-gap: 4em;
+           -webkit-column-rule: 1px dotted #ddd;
+           -moz-column-rule: 1px dotted #ddd;
+           column-rule: 1px dotted #ddd;  
+   }
 
-            .pick {
-                font-size: 1vw;
-                top: 93%;
-                position: absolute;
-            }
-         
 
+        
 
         </style>
     </head>
     <body>
         <div id="container">
             <div id="header">
-               <a href=""><h1>Julia Johnson</h1></a>
+               <a href=""><h3>Julia Johnson</h3></a>
                     <a ><h3 onclick="work()">Work</h3></a>
                     <a ><h3 onclick="social()">Social</h3></a>
                     <a href=""><h3>Contact</h3></a>  
             </div>
         </div>
         
-        <div class="background">
-
-            
-            <div id="left" onclick="developer()" class="left">
-                <h4 id="dev" style="color:#666469">DEVELOPER</h4>
-                <img id="dev2" src="https://raw.githubusercontent.com/juliajohnson18/juliacodes.com/master/Artboard%202.png">
-
-                <div> <h3 class="pick">Pick a side</h3></div>
-                <div class="none" id="dev_popup">
-                    
-                    <img class="icon" src="https://raw.githubusercontent.com/juliajohnson18/juliacodes.com/master/des.png">
-                    <h2 style="color: white;">Front End Web Designer</h2>
-                    <p> I enjoy creating simplistic designs that are pleasing to the eye</p>        
-               
-                    &nbsp;
-                     <p style="color: #EA5479">Design Tools I use:</p>
-                    <p>Adobe Illustrator, Photoshop, After Effects, XD, Sketch</p>
-    
-                    &nbsp;   
-
-                    <h2 style="color: white;">Projects & Designs</h2>
-                       
-                
-                
-                </div>
-   
-                
-
-            </div>
-            <div id="right" onclick="designer()" class="right">
-                <h4 id="des" style="color: #FAFDF7">DESIGNER</h4>
-                <img id="des2" src="https://raw.githubusercontent.com/juliajohnson18/juliacodes.com/master/Artboard%203.png">
-                <div class="none2" id="des_popup">
-                <img class="icon" src="https://raw.githubusercontent.com/juliajohnson18/juliacodes.com/master/dev.png">
-                <h2>Front End Web Developer</h2>
-                <p> I Prefer to code from scratch, and focus on finding new ways to display information</p>
-
-                &nbsp;
-                <p style="color: #79b3e6"> Languages I Speak:</p>
-                <p>HTML, CSS, Javascript, C++, Basics of Java</p>
-
-                &nbsp;
-                <p style="color: #79b3e6">Dev Tools</p>
-                <p>Atom, VSCode, Brackets, Bootstrap, IntelliJ, Terminal, Github, Codepen</p>
-                
-                &nbsp;
-                <h2>Projects & Codepens</h2>
-                </div>
-               
+        <div class="content">
+            <h1> Front-End Web Developer & Designer</h1>
+            <h2>I am passionate about creating meaningful, and memorable web experiences</h2>
+            <img src="images/brain.png"> 
  
-            </div>
-
         </div>
+
+        <div class="about">
+            <div class="center-about">
+            <h1 style="color: white; font-weight: 400;">Hi, I'm Julia. It's nice to finally meet you. </h1>
+                &nbsp;
+            <p style="color: white; text-align: center;font-weight: 100;">I'm a student at Purdue University, studying Web Development & Design. <br/> I've Interned at Abbott Laboratories 
+            for two consecutive years in their Web Production Department, and I'm currently an intern at Proof Digital, a Web Marketing and SEO Company.</p>
+            </div>
+        </div>
+
+        <div class="skills">
+            <div class="box">
+                <div class= "row">
+                    <div class="column" >
+                            <img class="icon" src="https://raw.githubusercontent.com/juliajohnson18/juliacodes.com/master/dev.png">
+                            <h2>Web Developer</h2>
+                            <p style="text-align: center;"> I Prefer to code from scratch, and focus <br/>on finding new ways to display information</p>    
+                            &nbsp;
+                            <p style="color: #79b3e6; text-align: center"> Languages I Speak:</p>
+                            <p style="text-align: center;">HTML</p> 
+                            <p style="text-align: center;">CSS</p>
+                            <p style="text-align: center;">Javascript</p>     
+                            <p style="text-align: center;">C++</p> 
+                            <p style="text-align: center;">Basics of Java</p> 
+                            &nbsp;
+                            <p style="color: #79b3e6; text-align: center">Dev Tools</p>
+                            <p style="text-align: center" >Atom</p>
+                            <p style="text-align: center;">VSCode</p> 
+                            <p style="text-align: center;">Brackets</p> 
+                            <p style="text-align: center;">Bootstrap</p> 
+                            <p style="text-align: center;">Terminal</p> 
+                            <p style="text-align: center;">Github</p> 
+
+
+
+                        <img class="icon" src="https://raw.githubusercontent.com/juliajohnson18/juliacodes.com/master/des.png">
+                        <h2>Designer</h2>
+                        <p style="text-align: center;"> I enjoy creating simplistic   <br/>designs that are pleasing to the eye</p>   
+                        &nbsp;
+                        <p style="color: #EA5479; text-align: center">I Enjoy Designing:</p>
+                        <p style="text-align: center;">Animations</p> 
+                        <p style="text-align: center;">Apps</p>
+                        <p style="text-align: center;">Icons</p>     
+                        <p style="text-align: center;">Flat Vectors<p> 
+                        <p style="text-align: center;">UI Concepts</p> 
+                       
+
+                        &nbsp;
+                         <p style="color: #EA5479; text-align:center;">Design Tools I use:</p>
+                        <p style="text-align: center;">Adobe Illustrator</p>
+                        <p style="text-align: center;">Photoshop</p> 
+                        <p style="text-align: center;">After Effects</p> 
+                        <p style="text-align: center;">Adobe XD</p> 
+                        <p style="text-align: center;">Sketch</p> 
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        
+<h1>Project</h1>
+<h2>Take a Look at what I've been Busy Working on </h2>
+
+        <div class="Projects">
+                <div class="box">
+                    <div class= "row2">
+                        
+                            <h2 style="padding-bottom: 10px;">Animated Timer</h2>
+                            <img style="align-content: left; width:50%; padding-top: 0px;" src="ezgif.com-video-to-gif.gif">
+                    </div>
+    
+                </div>
+            </div>        
+
+
   
 
         <script>
-
-            function developer() {
-
-                var element = document.getElementById("des_popup");
-                element.classList.toggle("on2");
-
-                var element = document.getElementById("des");
-                element.classList.toggle("desgone");
-
-                var element = document.getElementById("des2");
-                element.classList.toggle("desgone");
-}
-
-            function designer() {
-                var element = document.getElementById("dev_popup");
-                element.classList.toggle("on");
-
-                var element = document.getElementById("dev");
-                element.classList.toggle("devgone");
-
-                var element = document.getElementById("dev2");
-                element.classList.toggle("devgone");
-
-            }
-
-
-            function work(){
-                var element = document.getElementById("dev_popup");
-                element.classList.toggle("on");
-
-                var element = document.getElementById("dev");
-                element.classList.toggle("devgone");
-
-                var element = document.getElementById("dev2");
-                element.classList.toggle("devgone");
-
-
-                var element = document.getElementById("des_popup");
-                element.classList.toggle("on2");
-
-                var element = document.getElementById("des");
-                element.classList.toggle("desgone");
-
-                var element = document.getElementById("des2");
-                element.classList.toggle("desgone");
-            }
-
-
-            function social(){
-
-                var element = document.getElementById("left");
-                element.classList.toggle("left-right-gone");
-
-                var element = document.getElementById("right");
-                element.classList.toggle("left-right-gone");
-            }
-
 
         </script>
     </body>
