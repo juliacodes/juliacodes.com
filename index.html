@@ -51,7 +51,7 @@
 
 
             .content {
-                top: 6vh;
+                top: 10vh;
                 height: 100vh;
                 position: relative;
             }
@@ -73,7 +73,7 @@
             }
 
             .center-about {
-                width: 70%;
+                width: 40%;
                 display: block;
                 margin-left: auto;
                 margin-right: auto;
@@ -148,7 +148,253 @@
    }
 
 
+   .projects{
+        display: flex;
+        width: 100%;
+        padding: 0;
+        margin: 0;
+        background-color: #101630;
+        padding-bottom: 00px;
+   }
+
+   .row_projects{
+       display: inline-block;
+       margin-left: auto;
+       margin-right: auto;
+       width: 1000px;
+   }
+
+   .project{
+        height: 100px;
+        width: 520px;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        background-color: white;
+        border-radius: 1em;
+        padding: 4em;
+        margin-top: 50px;
+        margin-bottom: 50px;
+    
+   }
+
+
+
+   .project-contents{
+       display: flex;
+       justify-content: center;
+       margin: 0;
+       padding-bottom: 10px;
+   }
+
+
+
+
+
+.button {
+  position: relative;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  background: #f72359;
+  padding: 1em 2em;
+  border: none;
+  color: white;
+  font-size: 1.2em;
+  cursor: pointer;
+  outline: none;
+  overflow: hidden;
+  border-radius: 30px;
+}
+
+.button span {
+  position: relative;
+  pointer-events: none;
+}
+.button::before {
+  --size: 0;
+  content: '';
+  position: absolute;
+  left: var(--x);
+  top: var(--y);
+  width: var(--size);
+  height: var(--size);
+  background: radial-gradient(circle closest-side, #4405f7, transparent);
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  transition: width .2s ease, height .2s ease;
+}
+.button:hover::before {
+  --size: 400px;
+}
+
+
+
+
+.button2 {
+  position: relative;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  background: #f72359;
+  padding: 1em 2em;
+  border: none;
+  color: white;
+  font-size: 1.2em;
+  cursor: pointer;
+  outline: none;
+  overflow: hidden;
+  border-radius: 30px;
+}
+
+.button2 span {
+  position: relative;
+  pointer-events: none;
+}
+.button2::before {
+  --size: 0;
+  content: '';
+  position: absolute;
+  left: var(--z);
+  top: var(--a);
+  width: var(--size);
+  height: var(--size);
+  background: radial-gradient(circle closest-side, #2574b9, transparent);
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  transition: width .2s ease, height .2s ease;
+}
+.button2:hover::before {
+  --size: 500px;
+}
+
+
+
+
+.button3 {
+  position: relative;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  background: #f72359;
+  padding: 1em 2em;
+  border: none;
+  color: white;
+  font-size: 1.2em;
+  cursor: pointer;
+  outline: none;
+  overflow: hidden;
+  border-radius: 30px;
+}
+
+.button3 span {
+  position: relative;
+  pointer-events: none;
+}
+.button3::before {
+  --size: 0;
+  content: '';
+  position: absolute;
+  left: var(--b);
+  top: var(--c);
+  width: var(--size);
+  height: var(--size);
+  background: radial-gradient(circle closest-side, #2574b9, transparent);
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  transition: width .2s ease, height .2s ease;
+}
+.button3:hover::before {
+  --size: 500px;
+}
+
+.inputs{
+
+    position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+
+}
+.email1 {
+    background-color: lightgray;
+    border: none;
+    border-radius:30px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    
+    width: 500px;
+    height: 50px;
+    font-size: 20px;
+    padding-left: 30px;
+    outline: none;
+}
+
+
+form {
+    width: 100%;
+}
+
+
+ 
+@media only screen and (max-width: 600px) {
+    .project{
+        width: 200px;
+    }
+    .center-about{
+        width: 100%;
         
+    }
+
+    .center-about h1{
+        margin: 20px;
+    }
+
+    #header {
+        font-size: 3vw;
+    }
+
+    .content {
+        top: 20px;
+    }
+    .content h1{
+        margin: 20px;
+      
+    }
+
+    .content img{
+        width: 250px;
+    }
+
+    .about {
+        margin-top: -200px;
+    }
+
+    .next-group{
+        margin-top: -120px;
+    }
+
+    .email1{
+       
+        width: 80%;
+    }
+    .inputs {
+        width: 90%;
+    }
+} 
+
+
+@media only screen and (max-width: 1300px) {
+    form {
+        width: 90%;
+    }
+    
+    .email1 {
+        width: 100%;
+    }
+    button {
+        display: inline;
+    }
+}
 
         </style>
     </head>
@@ -156,29 +402,29 @@
         <div id="container">
             <div id="header">
                <a href=""><h3>Julia Johnson</h3></a>
-                    <a ><h3 onclick="work()">Work</h3></a>
-                    <a ><h3 onclick="social()">Social</h3></a>
-                    <a href=""><h3>Contact</h3></a>  
+                    <a href="#skills"><h3>Skills</h3></a>
+                    <a href="#projects"><h3>Projects</h3></a>
+                    <a href="#contact"><h3>Contact</h3></a>  
             </div>
         </div>
         
         <div class="content">
             <h1> Front-End Web Developer & Designer</h1>
             <h2>I am passionate about creating meaningful, and memorable web experiences</h2>
-            <img src="https://raw.githubusercontent.com/juliajohnson18/juliacodes.com/master/brain.png"> 
+            <img src="images/brain.png"> 
  
         </div>
 
         <div class="about">
             <div class="center-about">
-            <h1 style="color: white; font-weight: 400;">Hi, I'm Julia. It's nice to finally meet you. </h1>
+            <h1 style="color: white; font-weight: 400; ">Hi, I'm Julia. It's nice to finally meet you. </h1>
                 &nbsp;
-            <p style="color: white; text-align: center;font-weight: 100;">I'm a student at Purdue University, studying Web Development & Design. <br/> I've Interned at Abbott Laboratories 
+            <p style="padding: 20px;color: white; text-align: center;font-weight: 100; padding-left: 20px; padding-right: 20px;">I'm a student at Purdue University, studying Web Development & Design. I've Interned at Abbott Laboratories 
             for two consecutive years in their Web Production Department, and I'm currently an intern at Proof Digital, a Web Marketing and SEO Company.</p>
             </div>
         </div>
 
-        <div class="skills">
+        <div id="skills"class="skills">
             <div class="box">
                 <div class= "row">
                     <div class="column" >
@@ -228,25 +474,74 @@
 
             </div>
         </div>
-        
-<h1>Project</h1>
-<h2>Take a Look at what I've been Busy Working on </h2>
+        <button></button>
+<div id="projects" class="next-group">        
+<h1>Projects</h1>
+<h2>Take a Look At What I've Been Busy Working On </h2>
+<div class="projects">
+    <div class="row_projects">
+        <div class="project codePen, button">
+        <a href="https://codepen.io/juliaa_johnsonn/"><p style="color: white; font-weight: 100" class="project-contents">CodePens</p>
+        <img style="padding-top: 5px; width: 70px"src="images/codepen.png">
+        </a>
+        </div>
 
-        <div class="Projects">
-                <div class="box">
-                    <div class= "row2">
-                        
-                            <h2 style="padding-bottom: 10px;">Animated Timer</h2>
-                            <img style="align-content: left; width:50%; padding-top: 0px;" src="ezgif.com-video-to-gif.gif">
-                    </div>
-    
+
+          <div onclick="unavailable()" class="project Designs, button3">
+                <a href="https://www.instagram.com/juliacodes/"><p id="unavailable" style="color: white; font-weight: 100" class="project-contents">Web Designs</p>
+                <img id = "designs1" style="padding-top: 10px; width: 35px" src ="images/pencil-case.png">
+                </a>
                 </div>
-            </div>        
+        <div class="project instagram, button2">
+                <a href="https://www.instagram.com/juliacodes/"><p style="color: white; font-weight: 100" class="project-contents">Instagram Blog</p>
+                <img style="padding-top: 10px; width: 55px" src ="images/download.png">
+                </a>
+                </div>
+
+
+    </div>
+</div>
+</div>
+
+<div id = "contact"class="contact">
+    <h1>Contact</h1>
+    <h2 style="padding-bottom: 100px;">I'd Love It If You Reached Out <br/><br/><a style="text-decoration: underline;"href="@mailto:juliajohnson@purdue.edu"> juliajohnson@purdue.edu</a></h2>
+
+</div>
+
 
 
   
 
         <script>
+            function unavailable (){
+                document.getElementById("unavailable").innerHTML = "Coming Soon!";
+            }
+
+            document.querySelector('.button').onmousemove = (e) => {
+  const x = e.pageX - e.target.offsetLeft
+  const y = e.pageY - e.target.offsetTop
+  e.target.style.setProperty('--x', `${ x }px`)
+  e.target.style.setProperty('--y', `${ y }px`)
+ 
+}
+
+           document.querySelector('.button2').onmousemove = (j) => {
+  const z = j.pageX - j.target.offsetLeft
+  const a = j.pageY - j.target.offsetTop
+  j.target.style.setProperty('--z', `${ z }px`)
+  j.target.style.setProperty('--a', `${ a }px`)
+ 
+}
+
+           document.querySelector('.button3').onmousemove = (k) => {
+  const b = k.pageX - k.target.offsetLeft
+  const c = k.pageY - k.target.offsetTop
+  k.target.style.setProperty('--b', `${ b }px`)
+  k.target.style.setProperty('--c', `${ c }px`)
+ 
+}
+
 
         </script>
     </body>
