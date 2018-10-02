@@ -16,6 +16,10 @@
             
             }
 
+            .link_header{
+                display: inline;
+            }
+
             a:hover{
                 color: lightgray;
                 transition: 1s;
@@ -341,6 +345,9 @@ form {
 
  
 @media only screen and (max-width: 600px) {
+    .link_header{
+        display: none;
+    }
     h1{
         font-size: 30px;
     }
@@ -413,9 +420,11 @@ form {
         <div id="container">
             <div id="header">
                <a href=""><h3>Julia Johnson</h3></a>
-                    <a href="#skills"><h3>Skills</h3></a>
+               <div class="link_header">    
+               <a href="#skills"><h3>Skills</h3></a>
                     <a href="#projects"><h3>Projects</h3></a>
-                    <a href="#contact"><h3>Contact</h3></a>  
+                    <a href="#contact"><h3>Contact</h3></a> 
+                </div> 
             </div>
         </div>
         
