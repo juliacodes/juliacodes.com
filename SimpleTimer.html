@@ -1,0 +1,183 @@
+<html>
+    <head>
+        <title>Bouncing Timer</title>
+    </head>
+    <style>
+        body {
+            background-color: #88C0EA;
+            font-family: roboto;
+            font-weight: 100;
+            position: relative;
+}
+
+
+.clock {
+display: block;
+margin-left: auto;
+margin-right: auto;
+width: 600px;
+margin-top: 10vh;
+align-content: center;
+
+font-size: 80px;
+}
+
+.box1, .box2, .box3 {
+margin: 20px;
+padding: 20px;
+background-color: white;
+border-radius: 20px;
+box-shadow: 10px 10px 50px 10px rgba(69, 93, 99, .3);
+display: inline-block;
+}
+
+.box1{
+    margin-left: 10%;
+}
+
+
+.box3-alt {
+animation: bounce 1s infinite;
+}
+.bounce {
+  height: 105px;
+  width: 90px;
+
+display: inline-block;
+  /* Handling the animation */
+  -webkit-animation-name: bounce;
+  -webkit-animation-duration: .2s;
+  animation-name: bounce;
+  animation-duration: .2s ;
+}
+
+@keyframes bounce {
+0%, 100% {
+  transform: translateY(0px);
+}
+50% {
+  transform: translateY(10px);
+}
+}
+
+p{
+    font-size: 15px;
+    display: inline;
+    background-color: #121325;
+    color: white;
+    padding: 6px;
+    margin-right: 20px; 
+    border-radius: 10px;
+    transition-duration: 1s;
+
+}
+
+
+p:hover{
+    background-color: lightgray;
+    transition-duration: 1s;
+}
+    </style>
+    <body>
+        <div style="margin-top: 20px;"class="back-button">
+            <p><a style="color: white; text-decoration: none;" href="http://juliacodes.com/#projects"><- Back</a></p>
+        </div>
+        <div class="header">
+            <h1 style="text-align: center; color: white; font-weight: 500; font-size: 40px; margin-top: 200px;">Simple Bouncing Timer</h1>
+            <div style="width:100%" class="tag_cont">
+            <div style="margin-left: auto; margin-right: auto; width: 290px; align-content: center;" class="tags">
+                <p>#HTML</p><p>#CSS</p><p>#JS</p><p style="margin-right: 0;">#JQUERY</p>
+            </div>
+            </div>
+        </div>
+         <div class="content">
+            <div class="clock">
+                   
+               <label class="box1" id="hours">00</label><label class="box2" id="minutes">00</label><label class="box3" class="box3-alt" id="seconds">00</label>
+                     
+            </div>
+                     
+       </div>
+       <div style="position: absolute; bottom: 20px;"class="codepen_link">
+           <p style="padding: 20px; "> <a style="color: white; text-decoration: none;" href="https://codepen.io/juliaa_johnsonn/pen/ejGdRg">Click Here for Access to the Code</a></p>
+       </div>
+        <script>
+            // I'm sure theres a million and one much easier ways to do this! But here's how I made it work!
+
+var hoursLabel = document.getElementById("hours");
+var minutesLabel = document.getElementById("minutes");
+var secondsLabel = document.getElementById("seconds");
+var totalSeconds = 0;
+var seconds = 0;
+var minutes = 0;
+var hours = 0;
+
+setInterval(setTime, 1000);
+
+function setTime() {
+
+  // animations 
+  if(totalSeconds >= 0 ){
+    var element = document.getElementById("seconds");
+    element.classList.add("box3-alt"); 
+  }
+  
+  if(totalSeconds % 60 == 0){
+    var element = document.getElementById("minutes");
+    element.classList.add("box3-alt"); 
+  } else {
+    var element = document.getElementById("minutes");
+    element.classList.remove("box3-alt"); 
+  }
+  
+  if(totalSeconds % 3600 == 0){
+    var element = document.getElementById("hours");
+    element.classList.add("box3-alt"); 
+  } else {
+    var element = document.getElementById("hours");
+    element.classList.remove("box3-alt"); 
+  }
+
+// sets time before the minutes have to reset to 0
+  if(minutes < 60){
+    seconds = totalSeconds % 60;
+    minutes = parseInt(totalSeconds / 60);
+    hours = parseInt(totalSeconds / 3600);
+    
+    secondsLabel.innerHTML = pad(seconds);
+    minutesLabel.innerHTML = pad(minutes);
+    hoursLabel.innerHTML = pad(hours);  
+  } 
+
+  // sets time when the minutes = 60 or are greater than 60
+  if (minutes >= 60){
+    seconds = totalSeconds % 60;
+    hours = parseInt(totalSeconds / 3600);
+    minutes = parseInt((totalSeconds / 60) - (hours * 60));
+   
+
+    secondsLabel.innerHTML = pad(seconds);
+    minutesLabel.innerHTML = pad(minutes);
+    hoursLabel.innerHTML = pad(hours); 
+  }
+  
+  ++totalSeconds;
+}
+
+// adds the extra 0 in front of the numbers
+function pad(val) {  
+  var valString = val + "";
+  if (valString.length < 2) {
+    return "0" + valString;
+  } else {
+    return valString;
+  }
+}
+
+
+
+
+
+        </script>
+    </body>
+</html>
