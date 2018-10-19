@@ -1,0 +1,288 @@
+<html>
+    <head>
+        <title>Random Color Generator</title>
+    </head>
+    <style>
+    body {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+#centerCircle{
+  position: absolute;
+  border-radius: 100%;
+  width: 20px;
+  height: 20px;
+  margin-top: 270px;
+  margin-left: 490px;
+  opacity: .75;
+  background-color: black;
+}
+
+#circles{
+  display: block;
+  margin-left: 10vw;
+  
+}
+
+
+#circle1{
+  opacity: .75;
+  position: absolute;
+  margin-top: 50px;
+  margin-left: 400px;
+  display: block;
+  width: 200px;
+  height: 200px;
+  border-radius: 100%;
+  background-color: black;
+}
+
+#colorName1{
+  transition-duration: 1s;
+  opacity: 0;
+  font-family: roboto;
+  font-size: 20px;
+  margin-top: 40%;
+  text-align: center;
+}
+
+#colorName1:hover {
+  opacity: 1;
+  transition-duration: 1s;
+}
+
+#circle2{
+  opacity: .75;
+  position: absolute;
+  margin-top: 140px;
+  margin-left: 290px;
+  display: block;
+  width: 200px;
+  height: 200px;
+  border-radius: 100%;
+  background-color: black;
+}
+
+#colorName2{
+  opacity: 0;
+  font-family: roboto;
+  font-size: 20px;
+  margin-top: 40%;
+  text-align: center;
+}
+
+#colorName2:hover {
+  opacity: 1;
+  transition-duration: 1s;
+}
+
+#circle3{
+    opacity: .75;
+  position: absolute;
+  margin-top: 140px;
+  margin-left: 510px;
+  display: block;
+  width: 200px;
+  height: 200px;
+  border-radius: 100%;
+  background-color: black;
+}
+
+#colorName3{
+  opacity: 0;
+  font-family: roboto;
+  font-size: 20px;
+  margin-top: 40%;
+  text-align: center;
+}
+
+#colorName3:hover {
+  opacity: 1;
+  transition-duration: 1s;
+}
+
+#circle4{
+    opacity: .75;
+  position: absolute;
+  margin-top: 280px;
+  margin-left: 325px;
+  margin-right: auto;
+  display: block;
+  width: 200px;
+  height: 200px;
+  border-radius: 100%;
+  background-color: black;
+}
+
+#colorName4{
+  opacity: 0;
+  font-family: roboto;
+  font-size: 20px;
+  margin-top: 40%;
+ text-align: center
+  
+}
+
+#colorName4:hover {
+  opacity: 1;
+  transition-duration: 1s;
+}
+
+#circle5{
+  opacity: .75;
+  position: absolute;
+  margin-top: 280px;
+  margin-left: 475px;
+  display: block;
+  width: 200px;
+  height:200px;
+  border-radius: 100%;
+  background-color: black;
+  margin-bottom: 100px;
+}
+
+#colorName5{
+  opacity: 0;
+  font-family: roboto;
+  font-size: 20px;
+  margin-top: 40%;
+  text-align: center;
+}
+
+#colorName5:hover {
+  opacity: 1;
+  transition-duration: 1s;
+}
+
+
+
+
+@keyframes pulse {
+  0%, 100%{
+    transform: scale(1);
+  }
+  
+  50%{
+    transform: scale(.75);
+  }
+}
+
+
+
+
+    </style>
+    <body>
+            <div id="circles">
+                    <div onclick = "newPallete()" id="centerCircle"></div>
+                  <div onclick = "setRandomColor()"id="circle1"><p id="colorName1"></p></div>
+                  <div onclick = "setRandomColor2()"id="circle2"><p id="colorName2"></p></div>
+                  <div onclick = "setRandomColor3()"id="circle3"><p id="colorName3"></p></div>
+                  <div onclick = "setRandomColor4()"id="circle4"><p id="colorName4"></p></div>
+                  <div onclick = "setRandomColor5()"id="circle5"><p id="colorName5"></p></div>
+                  </div>
+                                    
+        <script>
+            src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"
+
+            function randomColor() {
+  var letters = '0123456789ABCDEF';
+  var color = '#';
+  
+  for (var i = 0; i < 6; i++) {
+    color += letters[Math.floor(Math.random() * 16)];
+  }
+  return color;
+}
+
+
+function setRandomColor() {
+  $("#circle1").css("transition-duration", '.5s');
+  $("#circle1").css("transition-delay", '0');
+  $("#circle1").css("background-color", randomColor());
+  
+  document.getElementById("colorName1").innerHTML = randomColor().toString();
+}
+
+function setRandomColor2(){
+  $("#circle2").css("transition-duration", '.5s');
+  $("#circle2").css("transition-delay", '0');
+  $("#circle2").css("background-color", randomColor());
+  
+  document.getElementById("colorName2").innerHTML = randomColor().toString();
+}
+
+function setRandomColor3(){
+  $("#circle3").css("transition-duration", '.5s');
+  $("#circle3").css("transition-delay", '0');
+  $("#circle3").css("background-color", randomColor());
+  
+  document.getElementById("colorName3").innerHTML = randomColor().toString();
+}
+
+function setRandomColor4(){
+  $("#circle4").css("transition-duration", '.5s');
+  $("#circle4").css("transition-delay", '0');
+  $("#circle4").css("background-color", randomColor());
+  
+  document.getElementById("colorName4").innerHTML = randomColor().toString();
+}
+
+function setRandomColor5(){
+  $("#circle5").css("transition-duration", '.5s');
+  $("#circle5").css("transition-delay", '0');
+  $("#circle5").css("animation-delay", '0s');
+  $("#circle5").css("background-color", randomColor());
+  
+  document.getElementById("colorName5").innerHTML = randomColor().toString();
+}
+
+
+function newPallete() {
+  $("#circle1").css("background-color", randomColor());
+  $("#circle1").css("transition-duration", '1s');
+  $("#circle1").css("animation", 'pulse 2s');
+  
+  document.getElementById("colorName1").innerHTML = randomColor().toString();
+  
+  $("#circle2").css("background-color", randomColor());
+  $("#circle2").css("animation", 'pulse 2s');
+  document.getElementById("circle2").style.animationDelay = ".25s";
+  $("#circle2").css("transition-duration", '1s');
+  $("#circle2").css("transition-delay", '.25s');
+  
+  document.getElementById("colorName2").innerHTML = randomColor().toString();
+  
+  $("#circle3").css("background-color", randomColor());
+  $("#circle3").css("animation", 'pulse 2s');
+  document.getElementById("circle3").style.animationDelay = "1s";
+  $("#circle3").css("transition-duration", '1s');
+  $("#circle3").css("transition-delay", '1s');
+  
+  document.getElementById("colorName3").innerHTML = randomColor().toString();
+  
+  $("#circle4").css("background-color", randomColor());
+  $("#circle4").css("animation", 'pulse 2s');
+  document.getElementById("circle4").style.animationDelay = ".5s";
+  $("#circle4").css("transition-duration", '1s');
+  $("#circle4").css("transition-delay", '.5s');
+  document.getElementById("colorName4").innerHTML = randomColor().toString(); 
+  
+  $("#circle5").css("background-color", randomColor());
+  $("#circle5").css("animation", 'pulse 2s');
+  document.getElementById("circle5").style.animationDelay = ".75s";
+  $("#circle5").css("transition-duration", '1s');
+  $("#circle5").css("transition-delay", '.75s');
+  document.getElementById("colorName5").innerHTML = randomColor().toString();
+
+  
+return newPalette();
+} 
+
+
+        </script>
+    </body>
+</html>
