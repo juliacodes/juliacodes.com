@@ -173,11 +173,35 @@
 }
 
 
+.palt{
+    font-size: 15px;
+    display: inline;
+    background-color: black;
+    color: white;
+    padding: 6px;
+    margin-right: 20px; 
+    border-radius: 10px;
+    transition-duration: 1s;
 
+}
+.palt:hover{
+    background-color: lightgray;
+    transition-duration: 1s;
+}
 
     </style>
     <body>
-            <div id="circles">
+            <div style="margin-top: 20px;"class="back-button">
+                    <p class="palt"><a style="color: white; text-decoration: none;" href="http://juliacodes.com/#projects"><- Back</a></p>
+                </div>
+                <h1 style="text-align: center; color: black; font-weight: 500; font-size: 40px; margin-top: 200px;">Animated Search Input Form</h1>
+            <div style="width:100%" class="tag_cont">
+            <div style="margin-left: auto; margin-right: auto; width: 180px; align-content: center;" class="tags">
+                <p class="palt">#HTML</p><p class="palt">#CSS</p><p class="palt">#JS</p>
+            </div>
+            </div>
+        <div style="width: 100%;" class="circles_cont">
+            <div style="margin-top: 0px;margin-left: 20; margin-right: auto; " id="circles">
                     <div onclick = "newPallete()" id="centerCircle"></div>
                   <div onclick = "setRandomColor()"id="circle1"><p id="colorName1"></p></div>
                   <div onclick = "setRandomColor2()"id="circle2"><p id="colorName2"></p></div>
@@ -185,7 +209,11 @@
                   <div onclick = "setRandomColor4()"id="circle4"><p id="colorName4"></p></div>
                   <div onclick = "setRandomColor5()"id="circle5"><p id="colorName5"></p></div>
                   </div>
-                                    
+        </div>    
+        
+        <div style="position: absolute; bottom: 30px;"class="codepen_link">
+                <p class="palt" style="padding: 10px; "> <a style="color: white; text-decoration: none;" href="https://codepen.io/juliaa_johnsonn/pen/OwzJMW">Click Here for Access to the Code</a></p>
+            </div>
         <script>
             src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"
 
