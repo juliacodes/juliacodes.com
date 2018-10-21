@@ -414,6 +414,23 @@ form {
     }
 }
 
+.proj_img{
+    padding: 0;
+    border-radius: 50px; 
+    width: 80%; 
+    margin-top: 60px;
+    margin-bottom: 50px;
+    box-shadow: none;
+    transform: translate(0,0px);
+    border: 1px solid lightgray;
+}
+
+.proj_img:hover{
+    transition-duration: 1s;
+    transform: translate(0,-20px);
+    box-shadow: 0px 30px 60px #CECECE;
+}
+
         </style>
     </head>
     <body>
@@ -497,32 +514,12 @@ form {
 <div id="projects" class="next-group">        
 <h1>Projects</h1>
 <h2>Take a Look At What I've Been Busy Working On </h2>
+<a href="/SimpleTimer.html"><img class="proj_img" src="simpletimer.gif"></a>
+<a href="/AnimatedSearch.html"><img img class="proj_img" src="animatedsearch.png"></a>
+<a href="/RandomColorGen.html"><img img class="proj_img" src="randomcolorGen.gif"></a>
 <div class="projects">
-    <div class="row_projects">
-        <a href="https://codepen.io/juliaa_johnsonn/">
-        <div class="project codePen, button">
-        <p style="color: white; font-weight: 100" class="project-contents">CodePens</p>
-        <img style="padding-top: 5px; width: 70px"src="https://raw.githubusercontent.com/juliajohnson18/juliacodes.com/master/codepen.png">
-        
-        </div>
-        </a>
-
-
-          <div onclick="unavailable()" class="project Designs, button3">
-                <p id="unavailable" style="color: white; font-weight: 100" class="project-contents">Web Designs</p>
-                <img id = "designs1" style="padding-top: 10px; width: 35px" src ="https://raw.githubusercontent.com/juliajohnson18/juliacodes.com/master/pencil-case.png">
-              
-                </div>
-                <a href="https://www.instagram.com/juliacodes/">
-        <div class="project instagram, button2">
-                <p style="color: white; font-weight: 100" class="project-contents">Instagram Blog</p>
-                <img style="padding-top: 10px; width: 55px" src ="https://raw.githubusercontent.com/juliajohnson18/juliacodes.com/master/download.png">
-                
-                </div>
-                </a>
-
-
-    </div>
+    
+    
 </div>
 </div>
 
