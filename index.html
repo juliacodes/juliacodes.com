@@ -72,6 +72,31 @@
                 margin-right: auto;
             }
 
+            .front-image{
+                animation: loadIn 3s;
+                align-content: center;
+                width: 40vh; 
+                padding: 30px;
+                display: block;
+                margin-left: auto;
+                margin-right: auto;
+                opacity: 1;
+            }
+
+            @keyframes loadIn {
+                0%{
+                    margin-top: -100px;
+                    width: 100vh;
+                    opacity: 0;
+                }
+                100%{
+                    margin-top: 0px;
+                    width: 40vh;
+                    opacity: 1;
+
+                }
+            }
+
             .about {
                 width: 100%;
                 padding: 0;
@@ -398,6 +423,16 @@ form {
     .inputs {
         width: 90%;
     }
+    .proj_img{
+    padding: 0;
+    border-radius: 50px; 
+    width: 400px; 
+    margin-top: 60px;
+    margin-bottom: 50px;
+    box-shadow: none;
+    transform: translate(0,0px);
+    border: 1px solid lightgray;
+}
 } 
 
 
@@ -412,12 +447,23 @@ form {
     button {
         display: inline;
     }
+
+    .proj_img{
+    padding: 0;
+    border-radius: 50px; 
+    width: 500px; 
+    margin-top: 60px;
+    margin-bottom: 50px;
+    box-shadow: none;
+    transform: translate(0,0px);
+    border: 1px solid lightgray;
+}
 }
 
 .proj_img{
     padding: 0;
     border-radius: 50px; 
-    width: 80%; 
+    width: 900px; 
     margin-top: 60px;
     margin-bottom: 50px;
     box-shadow: none;
@@ -448,7 +494,7 @@ form {
         <div class="content">
             <h1> Front-End Web Developer & Designer</h1>
             <h2>I am passionate about creating meaningful, and memorable web experiences</h2>
-            <img src="https://raw.githubusercontent.com/juliajohnson18/juliacodes.com/master/brain.png"> 
+            <img class="front-image" src="https://raw.githubusercontent.com/juliajohnson18/juliacodes.com/master/brain.png"> 
  
         </div>
 
@@ -514,9 +560,9 @@ form {
 <div id="projects" class="next-group">        
 <h1>Projects</h1>
 <h2>Take a Look At What I've Been Busy Working On </h2>
-<a href="/SimpleTimer.html"><img class="proj_img" src="https://raw.githubusercontent.com/juliajohnson18/juliacodes.com/master/simpletimer.gif"></a>
-<a href="/AnimatedSearch.html"><img img class="proj_img" src="https://raw.githubusercontent.com/juliajohnson18/juliacodes.com/master/animatedsearch.png"></a>
-<a href="/RandomColorGen.html"><img img class="proj_img" src="https://raw.githubusercontent.com/juliajohnson18/juliacodes.com/master/randomcolorGen.gif"></a>
+<a href="/SimpleTimer.html"><img class="proj_img" src="simpletimer.gif"></a>
+<a href="/AnimatedSearch.html"><img img class="proj_img" src="animatedsearch.png"></a>
+<a href="/RandomColorGen.html"><img img class="proj_img" src="randomcolorGen.gif"></a>
 <div class="projects">
     
     
@@ -533,36 +579,5 @@ form {
 
   
 
-        <script>
-            function unavailable (){
-                document.getElementById("unavailable").innerHTML = "Coming Soon!";
-            }
-
-            document.querySelector('.button').onmousemove = (e) => {
-  const x = e.pageX - e.target.offsetLeft
-  const y = e.pageY - e.target.offsetTop
-  e.target.style.setProperty('--x', `${ x }px`)
-  e.target.style.setProperty('--y', `${ y }px`)
- 
-}
-
-           document.querySelector('.button2').onmousemove = (j) => {
-  const z = j.pageX - j.target.offsetLeft
-  const a = j.pageY - j.target.offsetTop
-  j.target.style.setProperty('--z', `${ z }px`)
-  j.target.style.setProperty('--a', `${ a }px`)
- 
-}
-
-           document.querySelector('.button3').onmousemove = (k) => {
-  const b = k.pageX - k.target.offsetLeft
-  const c = k.pageY - k.target.offsetTop
-  k.target.style.setProperty('--b', `${ b }px`)
-  k.target.style.setProperty('--c', `${ c }px`)
- 
-}
-
-
-        </script>
     </body>
 </html>
