@@ -1,584 +1,100 @@
+<!DOCTYPE html>
 <html>
     <head>
-            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>juliacodes</title>
+        <link rel="stylesheet" href="master.css">
+        <link rel="stylesheet" href="webfontkit-20181115-233635/stylesheet.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="master.js"></script>
 
-        <style>
-            body, a, p{
-                font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-                text-decoration: none;
-                color: black;
-                
-            }
-            body {
-                align-content: center;
-                padding: 0;
-                margin: 0;
-            
-            }
-
-            .link_header{
-                display: inline;
-            }
-
-            a:hover{
-                color: lightgray;
-                transition: 1s;
-            }
-           
-            #container{
-                max-width: 100%;
-                position: absolute;
-                margin: 0 auto;
-            }
-
-            #header{
-                padding-top: 10px;
-                height: 0;
-                display: table-cell;
-                vertical-align: middle;
-            }
-            
-            h1{
-                padding-top: 10vh;
-                font-size: 40px;
-                text-align: center;
-            }    
-
-
-            h3{
-                display: inline;
-                margin: 20px;
-            }
-
-            h2{
-                text-align: center;
-                font-weight: 200;
-                font-size: 30px;
-                padding-bottom: 30px;
-            }
-
-
-            .content {
-                top: 10vh;
-                height: 100vh;
-                position: relative;
-            }
-            img {
-                align-content: center;
-                width: 40vh; 
-                padding: 30px;
-                display: block;
-                margin-left: auto;
-                margin-right: auto;
-            }
-
-            .front-image{
-                animation: loadIn 3s;
-                align-content: center;
-                width: 40vh; 
-                padding: 30px;
-                display: block;
-                margin-left: auto;
-                margin-right: auto;
-                opacity: 1;
-            }
-
-            @keyframes loadIn {
-                0%{
-                    margin-top: -100px;
-                    width: 100vh;
-                    opacity: 0;
-                }
-                100%{
-                    margin-top: 0px;
-                    width: 40vh;
-                    opacity: 1;
-
-                }
-            }
-
-            .about {
-                width: 100%;
-                padding: 0;
-                margin: 0;
-                background-color: #101630;
-                padding-bottom: 200px;
-            }
-
-            .center-about {
-                width: 40%;
-                display: block;
-                margin-left: auto;
-                margin-right: auto;
-            }
-
-            p{
-                letter-spacing: 1px;
-                line-height: 25px;
-            }
-
-            .skills{
-                width: 70%;
-                margin-top: -10vh;
-                display: block;
-                margin-left: auto;
-                margin-right: auto;
-                padding-bottom: 200px; 
-            }
-
-             .projects{
-                width: 50%;
-                display: block;
-                margin-left: auto;
-                margin-right: auto;
-                padding-bottom: 200px; 
-            }
-
-         
-            
-            .column {
-       
-                padding: 20px;
-                margin: 20px;
-                -webkit-columns: 2 100px;
-                -moz-columns: 2 100px;
-                columns: 2 100px;
-                -webkit-column-gap: 3em;
-                -moz-column-gap: 3em;
-                column-gap: 3em;
-                -webkit-column-rule: 1px dotted #ddd;
-                -moz-column-rule: 1px dotted #ddd;
-                column-rule: 1px dotted #ddd;
-               
-            }
-
-          
-
-            .box {
-                border-radius: 20px;
-                background-color: white;
-                box-shadow: 3px 3px 15px 1px rgb(140, 140, 140, 0.4);
-                border: 1px solid #E6ECF8;
-            }
-
-            .icon {
-                width: 70px;
-            }
-
-            .column2 {
-                
-           padding: 20px;
-           margin: 20px;
-           -webkit-columns: 3 200px;
-           -moz-columns: 3 200px;
-            columns: 3 200px;
-            -webkit-column-gap: 4em;
-           -moz-column-gap: 4em;
-           column-gap: 4em;
-           -webkit-column-rule: 1px dotted #ddd;
-           -moz-column-rule: 1px dotted #ddd;
-           column-rule: 1px dotted #ddd;  
-   }
-
-
-   .projects{
-        display: flex;
-        width: 100%;
-        padding: 0;
-        margin: 0;
-        background-color: #101630;
-        padding-bottom: 00px;
-   }
-
-   .row_projects{
-       display: inline-block;
-       margin-left: auto;
-       margin-right: auto;
-       width: 1000px;
-   }
-
-   .project{
-        height: 100px;
-        width: 520px;
-        display: block;
-        margin-left: auto;
-        margin-right: auto;
-        background-color: white;
-        border-radius: 1em;
-        padding: 4em;
-        margin-top: 50px;
-        margin-bottom: 50px;
-    
-   }
-
-
-
-   .project-contents{
-       display: flex;
-       justify-content: center;
-       margin: 0;
-       padding-bottom: 10px;
-   }
-
-
-
-
-
-.button {
-  position: relative;
-  -webkit-appearance: none;
-     -moz-appearance: none;
-          appearance: none;
-  background: #f72359;
-  padding: 1em 2em;
-  border: none;
-  color: white;
-  font-size: 1.2em;
-  cursor: pointer;
-  outline: none;
-  overflow: hidden;
-  border-radius: 30px;
-}
-
-.button span {
-  position: relative;
-  pointer-events: none;
-}
-.button::before {
-  --size: 0;
-  content: '';
-  position: absolute;
-  left: var(--x);
-  top: var(--y);
-  width: var(--size);
-  height: var(--size);
-  background: radial-gradient(circle closest-side, #4405f7, transparent);
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-  transition: width .2s ease, height .2s ease;
-}
-.button:hover::before {
-  --size: 400px;
-}
-
-
-
-
-.button2 {
-  position: relative;
-  -webkit-appearance: none;
-     -moz-appearance: none;
-          appearance: none;
-  background: #f72359;
-  padding: 1em 2em;
-  border: none;
-  color: white;
-  font-size: 1.2em;
-  cursor: pointer;
-  outline: none;
-  overflow: hidden;
-  border-radius: 30px;
-}
-
-.button2 span {
-  position: relative;
-  pointer-events: none;
-}
-.button2::before {
-  --size: 0;
-  content: '';
-  position: absolute;
-  left: var(--z);
-  top: var(--a);
-  width: var(--size);
-  height: var(--size);
-  background: radial-gradient(circle closest-side, #2574b9, transparent);
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-  transition: width .2s ease, height .2s ease;
-}
-.button2:hover::before {
-  --size: 500px;
-}
-
-
-
-
-.button3 {
-  position: relative;
-  -webkit-appearance: none;
-     -moz-appearance: none;
-          appearance: none;
-  background: #f72359;
-  padding: 1em 2em;
-  border: none;
-  color: white;
-  font-size: 1.2em;
-  cursor: pointer;
-  outline: none;
-  overflow: hidden;
-  border-radius: 30px;
-}
-
-.button3 span {
-  position: relative;
-  pointer-events: none;
-}
-.button3::before {
-  --size: 0;
-  content: '';
-  position: absolute;
-  left: var(--b);
-  top: var(--c);
-  width: var(--size);
-  height: var(--size);
-  background: radial-gradient(circle closest-side, #2574b9, transparent);
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-  transition: width .2s ease, height .2s ease;
-}
-.button3:hover::before {
-  --size: 500px;
-}
-
-.inputs{
-
-    position: absolute;
-      left: 50%;
-      transform: translateX(-50%);
-
-}
-.email1 {
-    background-color: lightgray;
-    border: none;
-    border-radius:30px;
-    margin-top: 50px;
-    margin-bottom: 50px;
-    
-    width: 500px;
-    height: 50px;
-    font-size: 20px;
-    padding-left: 30px;
-    outline: none;
-}
-
-
-form {
-    width: 100%;
-}
-
-
- 
-@media only screen and (max-width: 600px) {
-    .link_header{
-        display: none;
-    }
-    h1{
-        font-size: 30px;
-    }
-     h2{
-        font-size: 14px;
-    }
-    .project{
-        width: 200px;
-    }
-    .center-about{
-        width: 100%;
-        
-    }
-
-    .center-about h1{
-        margin: 20px;
-    }
-
-    #header {
-        font-size: 3vw;
-    }
-
-    .content {
-        top: 20px;
-        height: 100%;
-    }
-    .content h1{
-        margin: 20px;
-      
-    }
-
-    .content img{
-        width: 250px;
-    }
-
-    .about {
-        margin-top: -50px;
-    }
-
-    .next-group{
-        margin-top: -120px;
-    }
-
-    .email1{
-       
-        width: 80%;
-    }
-    .inputs {
-        width: 90%;
-    }
-    .proj_img{
-    padding: 0;
-    border-radius: 50px; 
-    width: 400px; 
-    margin-top: 60px;
-    margin-bottom: 50px;
-    box-shadow: none;
-    transform: translate(0,0px);
-    border: 1px solid lightgray;
-}
-} 
-
-
-@media only screen and (max-width: 1300px) {
-    form {
-        width: 90%;
-    }
-    
-    .email1 {
-        width: 100%;
-    }
-    button {
-        display: inline;
-    }
-
-    .proj_img{
-    padding: 0;
-    border-radius: 50px; 
-    width: 500px; 
-    margin-top: 60px;
-    margin-bottom: 50px;
-    box-shadow: none;
-    transform: translate(0,0px);
-    border: 1px solid lightgray;
-}
-}
-
-.proj_img{
-    padding: 0;
-    border-radius: 50px; 
-    width: 90%; 
-    margin-top: 60px;
-    margin-bottom: 50px;
-    box-shadow: none;
-    transform: translate(0,0px);
-    border: 1px solid lightgray;
-    transition-duration: 1s;
-}
-
-.proj_img:hover{
-    transition-duration: 1s;
-    transform: translate(0,-20px);
-    box-shadow: 0px 30px 60px #CECECE;
-}
-
-        </style>
     </head>
     <body>
-        <div id="container">
-            <div id="header">
-               <a href=""><h3>Julia Johnson</h3></a>
-               <div class="link_header">    
-               <a href="#skills"><h3>Skills</h3></a>
-                    <a href="#projects"><h3>Projects</h3></a>
-                    <a href="#contact"><h3>Contact</h3></a> 
-                </div> 
+        <div id="content">
+            <div class="sidebar">
+                <p onclick="home();" id="home" class="link">home</p>
+                <p onclick="about();" id="about" class="link">about</p>
+                <p onclick="skills();" id="skills" class="link">projects</p>
+                <p onclick="contact();" id="contact" class="link">contact</p>
+                <p onclick="tutorials();" id="tutorials" class="link">tutorials</p>
             </div>
-        </div>
-        
-        <div class="content">
-            <h1> Front-End Web Developer & Designer</h1>
-            <h2>I am passionate about creating meaningful, and memorable web experiences</h2>
-            <img class="front-image" src="https://raw.githubusercontent.com/juliajohnson18/juliacodes.com/master/brain.png"> 
- 
-        </div>
-
-        <div class="about">
-            <div class="center-about">
-            <h1 style="color: white; font-weight: 400; ">Hi, I'm Julia. It's nice to finally meet you. </h1>
-                &nbsp;
-            <p style="padding: 20px;color: white; text-align: center;font-weight: 100; padding-left: 20px; padding-right: 20px;">I'm a student at Purdue University, studying Web Development & Design. I've Interned at Abbott Laboratories 
-            for two consecutive years in their Web Production Department, and I'm currently an intern at Proof Digital, a Web Marketing and SEO Company.</p>
-            </div>
-        </div>
-
-        <div id="skills"class="skills">
-            <div class="box">
-                <div class= "row">
-                    <div class="column" >
-                            <img class="icon" src="https://raw.githubusercontent.com/juliajohnson18/juliacodes.com/master/dev.png">
-                            <h2>Web Developer</h2>
-                            <p style="text-align: center;"> I Prefer to code from scratch, and focus <br/>on finding new ways to display information</p>    
-                            &nbsp;
-                            <p style="color: #79b3e6; text-align: center"> Languages I Speak:</p>
-                            <p style="text-align: center;">HTML</p> 
-                            <p style="text-align: center;">CSS</p>
-                            <p style="text-align: center;">Javascript</p>   
-                            <p style="text-align: center;">PHP & SQL</p>   
-                            <p style="text-align: center;">C++</p>
-                            &nbsp;
-                            <p style="color: #79b3e6; text-align: center">Dev Tools</p>
-                            <p style="text-align: center" >Atom</p>
-                            <p style="text-align: center;">VSCode</p> 
-                            <p style="text-align: center;">Brackets</p> 
-                            <p style="text-align: center;">Bootstrap</p> 
-                            <p style="text-align: center;">Terminal</p> 
-                            <p style="text-align: center;">Github</p> 
-
-
-
-                        <img class="icon" src="https://raw.githubusercontent.com/juliajohnson18/juliacodes.com/master/des.png">
-                        <h2>Designer</h2>
-                        <p style="text-align: center;"> I enjoy creating simplistic   <br/>designs that are pleasing to the eye</p>   
-                        &nbsp;
-                        <p style="color: #EA5479; text-align: center">I Enjoy Designing:</p>
-                        <p style="text-align: center;">Animations</p> 
-                        <p style="text-align: center;">Apps</p>
-                        <p style="text-align: center;">Icons</p>     
-                        <p style="text-align: center;">Flat Vectors<p> 
-                        <p style="text-align: center;">UI Concepts</p> 
-                       
-
-                        &nbsp;
-                         <p style="color: #EA5479; text-align:center;">Design Tools I use:</p>
-                        <p style="text-align: center;">Adobe Illustrator</p>
-                        <p style="text-align: center;">Photoshop</p> 
-                        <p style="text-align: center;">After Effects</p> 
-                        <p style="text-align: center;">Adobe XD</p> 
-                        <p style="text-align: center;">Sketch</p> 
-
+            <div class="main">
+                    
+                    <div id="logo-cont">
+                        <img class="logo" id="line" src="LOGOLAYERS/line.png">
+                        <img class="logo" id="blue" src="LOGOLAYERS/blue.png">
+                        <img class="logo" id="pink" src="LOGOLAYERS/pink.png">
+                        <img class="logo" id="julia" src="LOGOLAYERS/julia.png">
+                        <img class="logo" id="codes" src="LOGOLAYERS/codes.png">
                     </div>
-                </div>
 
+                    <div id="about-cont" class="hidden">
+                        <div id="tab" class="tab-in">
+                            <div class="about-me">
+                                <h1>Julia Johnson</h1>
+                                <h2>Web Developer & Designer</h2>
+                                <p>I'm a student at <strong>Pudue University</strong>, studying Web Development & Design.
+                                     I've Interned at Abbott Laboratories for two consecutive years in 
+                                     their Web Production Department, and I'm currently an intern at Proof 
+                                     Digital, a Web Marketing and SEO Company.</p>
+                            
+                                <div class="loader">
+                                    <div class="loader-name">
+                                        HTML & CSS
+                                    </div>
+                                </div>
+                                <div class="loader">
+                                    <div class="loader-name">
+                                        Javascript
+                                    </div>
+                                </div>
+                                <div class="loader">
+                                    <div class="loader-name">
+                                        PHP & SQL
+                                    </div>
+                                </div>   
+                                <p>I prefer to code from scratch, and focus 
+                                        on finding new intuitive ways to display information. 
+                                    When designing, I enjoy creating simplistic sites and products that 
+                                    are pleasing to the eye</p> 
+                                <p>I love learning new frameworks and design styles, and I push myself to
+                                stay up to date on all new web technologies. I'm currently learning
+                                 <strong>React</strong> and <strong>Sass</strong>.
+                                </p>
+                                <p>Outside of my studies I run a blog on Instagram called <a href="https://www.instagram.com/juliacodes/">juliacodes</a>. I use 
+                                    this platform to connect with other developers and programmers, share tips, 
+                                    help new students begin programming.
+                                </p>
+                            </div>
+                        </div>
+                       
+                    </div>
+
+                    <div id="skills-cont" class="hidden">
+                            <div id="tab2" class="tab2-in">
+                                <div class="display-projects">
+                                    <a href="/SimpleTimer.html"><img class="proj_img" src="simpletimer.png"></a>   
+                                    
+                                    <div class="pagination">
+                                       <div class="arrow">❮</div>
+                                       <div class="arrow">❯</div>
+                                    </div>       
+                                </div>   
+                            </div>
+                    </div>
+
+                    <div id="tutorials-cont" class="hidden"></div>
+
+                    <div id="contact-cont" class="hidden">
+                        <div id="tab3" class="tab3-in">
+                            <div class="about-me">
+                                <h1>I'd love to hear from you</h1>
+                                <h2>You can always reach out by email <a href="mailto:john2122@purdue.edu.com" target="_top">here.</a></h2>
+                                <h2>Or connect with me on <a href="https://www.instagram.com/juliacodes/">Instagram</a> or on <a href="https://www.linkedin.com/in/julia-johnson-5887a9143/">Linkedin</a></h2>
+                            </div>
+                        </div>
+                    </div>
+                
             </div>
         </div>
-<div id="projects" class="next-group">        
-<h1>Projects</h1>
-<h2>Take a Look At What I've Been Busy Working On </h2>
-<a href="/SimpleTimer.html"><img class="proj_img" src="simpletimer.gif"></a>
-<a href="/AnimatedSearch.html"><img img class="proj_img" src="animatedsearch.png"></a>
-<a href="/RandomColorGen.html"><img img class="proj_img" src="https://raw.githubusercontent.com/juliajohnson18/juliacodes.com/master/Screen%20Shot%202018-10-29%20at%202.07.45%20AM.png"></a>
-<div class="projects">
-    
-    
-</div>
-</div>
-
-<div id = "contact"class="contact">
-    <h1>Contact</h1>
-    <h2 style="padding-bottom: 100px;">I'd Love It If You Reached Out <br/><br/><a style="text-decoration: underline;"href="@mailto:juliajohnson@purdue.edu" data-rel="external"> juliajohnson@purdue.edu</a></h2>
-
-</div>
-
-
-
-  
-
     </body>
 </html>
