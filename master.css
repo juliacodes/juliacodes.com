@@ -518,6 +518,7 @@ p{
         color: black;
         position: absolute;
         top: 500px;
+        transition-duration: 2s;
     }
 
 
