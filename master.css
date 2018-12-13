@@ -519,6 +519,7 @@ p{
         position: absolute;
         top: 500px;
         transition-duration: 2s;
+        width: 100%;
     }
 
 
