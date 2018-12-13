@@ -53,6 +53,10 @@ a{
     display: block;
 }
 
+.phome{
+    opacity: 0;
+}
+
     /* line class */
 .logo:nth-child(1){ 
     opacity: 1;
