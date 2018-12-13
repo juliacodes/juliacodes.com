@@ -1,0 +1,513 @@
+/* css for juliacodes.com 2018 */
+
+    /* universal */
+body{
+    padding: 0;
+    margin: 0;
+    height: 100vh;
+    overflow: hidden;
+}
+
+a{
+    color: #4F5557;
+    font-weight: bold;
+}
+
+#content{
+    display: flex;
+    height: 100%;
+}
+
+.main{
+    flex: 70%;
+    height: 100%;
+    position: relative;
+}
+
+    /* HOME */
+.logo-cont-hidden{
+    position: absolute;
+    width: 100%;
+    height: 100;
+    transition-duration: 2s;
+    opacity: 0;
+    }
+
+.logo-cont-shown{
+    position: absolute;
+    width: 100%;
+    max-width: 1500px;
+    height: 100%;
+    display: block;
+    transition-duration: 2s;
+    opacity: 1;
+}
+
+.logo, .logo-out{
+    position: absolute;
+    top: 22%;
+    left: 25%;
+    width: 50%;
+    overflow: hidden;
+    transition-duration: 2;
+    display: block;
+}
+
+    /* line class */
+.logo:nth-child(1){ 
+    opacity: 1;
+    animation: line;
+    animation-duration: 2s;
+}
+    /* INTRO  */
+    @keyframes line {
+        0%{
+            opacity: 0;
+        }
+        100%{
+            opacity: 1;
+        }
+    }
+
+    /* line class hide */
+.line-out{ 
+        opacity: 0;
+        animation: line-out;
+        animation-duration: 2s;
+    }
+        /* outro  */
+        @keyframes line-out {
+            0%{
+                opacity: 1;
+            }
+            100%{
+                opacity: 0;
+            }
+        }
+
+    /* blue class */
+.logo:nth-child(2){ 
+        margin: auto;
+        opacity: 1;
+        animation: blue;
+        animation-duration: 3s;
+}
+
+    /* INTRO */
+    @keyframes blue {
+        0%{
+            opacity: 0;
+            margin-left: 400px;
+        }
+        50%{
+            opacity: .3;
+        }
+        100%{
+            opacity: 1;
+            margin-left: 0;
+        }
+    }
+
+   /* blue class hide */
+.blue-out{ 
+    margin: 400px;
+    opacity: 0;
+    animation: blue-out;
+    animation-duration: 3s;
+}
+/* outro */
+@keyframes blue-out {
+    0%{
+        opacity: 1;
+        margin-left: 0px;
+    }
+    50%{
+        opacity: .3;
+    }
+    100%{
+        opacity: 0;
+        margin-left: 400px;
+    }
+}
+
+
+
+    /* pink class */
+.logo:nth-child(3){ 
+        margin: auto;
+        opacity: 1;
+        animation: pink;
+        animation-duration: 3s;
+}
+    /* INTRO */
+    @keyframes pink {
+        0%{
+            opacity: 0;
+            margin-left: -400px;
+        }
+        50%{
+            opacity: .3;
+        }
+        100%{
+            opacity: 1;
+            margin-left: 0;
+        }
+    }
+
+    /* julia class */
+.logo:nth-child(4){ 
+        margin: auto;
+        opacity: 1;
+        animation: julia;
+        animation-duration: 2s;
+}
+    /* INTRO */
+    @keyframes julia {
+        0%{
+            opacity: 0;
+            margin-left: 220px;
+            margin-top: -280px;
+        }
+        100%{
+            opacity: 1;
+            margin: 0;
+        }
+    }
+
+
+    /* codes class */
+    .logo:nth-child(5){ 
+        margin: auto;
+        opacity: 1;
+        animation: codes;
+        animation-duration: 2s;
+}
+    /* INTRO */
+    @keyframes codes {
+        0%{
+            opacity: 0;
+            margin-left: -220px;
+            margin-top: 280px;
+        }
+        100%{
+            opacity: 1;
+            margin: 0;
+        }
+    }
+
+    /* end home */
+
+
+    /* sidebar */
+
+.sidebar{
+    flex: 10%;
+    background-color: #2F4765;
+    padding: 10% 0 10% 0;
+    z-index: 1;
+}
+
+.link{
+    height: 17%;
+    color: white;
+    font-size: 30px;
+    text-align: center;
+}
+
+.link:after{
+    position: absolute;
+    content:"";
+    background-color: #AFD5CA;
+    width: 100px;
+    height: 3px;
+    transform: rotate(0deg);
+    opacity: 0;
+    transition-duration: 1s;
+}
+
+.link:nth-child(1):after, .link:nth-child(2):after{
+    margin: 20px 0 0 -90px;
+}
+
+.link:nth-child(3):after{
+    margin: 20px 0 0 -105px;
+}
+
+.link:nth-child(4):after{
+    margin: 20px 0 0 -100px;
+}
+
+.link:nth-child(5):after{
+    margin: 20px 0 0 -100px;
+}
+
+.link:hover::after{
+    opacity: 1;
+    transition-duration: 1s;
+    transform: rotate(-45deg);
+}
+
+
+
+.home-link-clicked, .about-link-clicked, .skills-link-clicked, .tutorials-link-clicked, .contact-link-clicked{
+    height: 17%;
+    color: white;
+    font-size: 30px;
+    text-align: center;
+}
+
+.home-link-clicked:after, .about-link-clicked:after,.skills-link-clicked:after, .tutorials-link-clicked:after, .contact-link-clicked:after{
+    position: absolute;
+    content:"";
+    background-color: #AFD5CA;
+    width: 100px;
+    height: 3px;
+    opacity: 1;
+    transition-duration: 1s;
+    transform: rotate(-45deg);
+}
+
+.home-link-clicked:after, .about-link-clicked:after{
+    margin: 20px 0 0 -90px;
+}
+
+.skills-link-clicked:after{
+    margin: 20px 0 0 -105px;
+}
+
+.tutorials-link-clicked:after{
+    margin: 20px 0 0 -110px;
+}
+
+.contact-link-clicked:after{
+    margin: 20px 0 0 -100px;
+}
+
+
+    /* end sidebar */
+
+
+    /* about */
+
+
+.hidden{
+    opacity: 0;
+    transition-duration: 1s;
+    pointer-events: none;
+}
+
+.about-cont-shown, .skills-cont-shown, .tutorials-cont-shown, .contact-cont-shown{
+    opacity: 1;
+    transition: 1s;
+}
+
+.tab-in{
+    background-color: #F5F6F8;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    animation: tab-in;
+    animation-duration: 2s;
+    margin-left: 20px;
+    pointer-events: all;
+}
+
+@keyframes tab-in{
+    0%{
+        margin-left: 500px;
+    }
+    100%{
+        margin-left: 20px;
+    }
+}
+
+.tab-out{
+    background-color: #F5F6F8;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    animation: tab-out;
+    animation-duration: 2s;
+    margin-left: 500px;
+    opacity: 0;
+    pointer-events: none;
+}
+
+@keyframes tab-out{
+    0%{
+        margin-left: 20px;
+        opacity: 1;
+    }
+    100%{
+        margin-left: 500px;
+        opacity: 0;
+    }
+}
+
+.about-me{
+    width: 70%;
+    height: auto;
+    display: block;
+    margin: 200px 20px 20px 70px;
+}
+
+h1{
+    font-weight: bold;
+}
+
+h2{
+    font-weight: 100;
+}
+
+p{
+    color: #4F5557;
+}
+
+.loader {
+    margin: 20px 10px 20px 60px;
+    border: 6px solid #F9C5B6;
+    border-radius: 50%;
+    display: inline-block;
+    width: 120px;
+    height: 120px;
+  }
+
+  .loader-name{
+    text-align: center;
+    margin-top: 50px;
+  }
+
+
+
+.tab2-in{
+    background-color: #C6E4DC;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    animation: tab2-in;
+    animation-duration: 2s;
+    margin-left: 40px;
+    padding: 40px 0 0 20px;
+}
+
+@keyframes tab2-in{
+    0%{
+        margin-left: 500px;
+    }
+    100%{
+        margin-left: 40px;
+    }
+}
+
+.tab2-out{
+    background-color: #C6E4DC;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    animation: tab-out;
+    animation-duration: 2s;
+    margin-left: 500px;
+    opacity: 0;
+}
+
+@keyframes tab2-out{
+    0%{
+        margin-left: 40px;
+        opacity: 1;
+    }
+    100%{
+        margin-left: 500px;
+        opacity: 0;
+    }
+}
+
+.display-projects{
+    width: 50%;
+    height: auto;
+    display: block;
+    margin: 25vh 20px 20px 100px;
+    padding: 20px 20px 20px 20px;
+}
+
+.proj_img{
+    width: 100%;
+    height: auto;
+}
+
+.pagination {
+    display: block;
+    width: 50px;
+    margin: 30px auto 10px auto;
+}
+
+.arrow{
+    display:inline-block;
+    color: white;
+    transform: scale(1.8);
+    margin-right: 10px;
+}
+
+
+.tab3-in{
+    background-color: rgb(231, 210, 204);
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    animation: tab3-in;
+    animation-duration: 2s;
+    margin-left: 60px;
+    padding: 40px 0 0 20px;
+}
+
+@keyframes tab3-in{
+    0%{
+        margin-left: 500px;
+    }
+    100%{
+        margin-left: 60px;
+    }
+}
+
+.tab3-out{
+    background-color: rgb(231, 210, 204);
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    animation: tab-out;
+    animation-duration: 2s;
+    padding: 40px 0 0 20px;
+    margin-left: 500px;
+    opacity: 0;
+}
+
+@keyframes tab3-out{
+    0%{
+        margin-left: 60px;
+        opacity: 1;
+    }
+    100%{
+        margin-left: 500px;
+        opacity: 0;
+    }
+}
+
+
+/* BEGIN MOBILE FRIENDLY CSS */
+
+@media screen and (max-width: 800px) {
+    .sidebar{
+        display: none;
+    }
+
+    .logo, .logo-out{
+        position: absolute;
+        top: 32%;
+        left: 15%;
+        width: 70%;
+        overflow: hidden;
+        transition-duration: 2;
+        display: block;
+    }
+
+
+}
