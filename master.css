@@ -511,6 +511,9 @@ p{
     
     .phome{
         opacity: 1;
+        color: black;
+        position: absolute;
+        top: 500px;
     }
 
 
