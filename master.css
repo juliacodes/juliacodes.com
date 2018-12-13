@@ -508,6 +508,10 @@ p{
         transition-duration: 2;
         display: block;
     }
+    
+    .phome{
+        opacity: 1;
+    }
 
 
 }
