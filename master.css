@@ -55,6 +55,7 @@ a{
 
 .phome{
     opacity: 0;
+    transition-duration: 2s;
 }
 
     /* line class */
