@@ -428,32 +428,54 @@
     }
     
     .display-projects{
-        width: 50%;
-        height: auto;
-        display: block;
-        margin: 25vh 20px 20px 100px;
-        padding: 20px 20px 20px 20px;
-    }
-    
-    .proj_img{
         width: 100%;
-        height: auto;
-    }
-    
-    .pagination {
+        height: 95%;
+        overflow: scroll;
         display: block;
-        width: 50px;
-        margin: 30px auto 10px auto;
+        
     }
     
-    .arrow{
-        display:inline-block;
+    .project-image{
+        width: 600px;
+        display: inline-block;
+        margin-bottom: 20px;
+        margin-left: 5%;
+        position: relative;
+        
+    }
+    
+    .project-image > img{
+        width: 600px;
+    }
+
+    .overlay {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 100%;
+        width: 100%;
+        opacity: 0;
+        transition: .5s ease;
+        background-color: rgba(173, 173, 173, 0.61);
+      }
+      
+      .project-image:hover .overlay {
+        opacity: 1;
+      }
+      
+      .text {
         color: white;
-        transform: scale(1.8);
-        margin-right: 10px;
-    }
-    
-    
+        font-weight: 200;
+        font-size: 20px;
+        position: absolute;
+        top: 80%;
+        width: 100%;
+        text-align: center;
+      }
+
+
     .tab3-in{
         background-color: #F5F6F8;
         height: 100%;
@@ -497,7 +519,7 @@
         }
     }
     
-    
+    .mySlides {display:none; height: 300px;}
     /* BEGIN MOBILE FRIENDLY CSS */
     
     @media screen and (max-width: 800px) {
