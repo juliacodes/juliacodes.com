@@ -9,7 +9,6 @@
 body{
     background-color: white;
     font-family: 'Raleway', sans-serif;
-
     height: 100vh;
 
 }
@@ -42,14 +41,21 @@ body{
 h1{
     font-weight: 900;
     font-size: 40px;
+    color: black;
 }
 
 
 .navbar{
+    transition: none;
+    animation: none;
     padding: 20px 0 20px 0;
     height: auto;
-    position: relative;
-    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    z-index: 99;
+    
 }
 .navbar > a{
     text-decoration: none;
@@ -261,7 +267,7 @@ h1{
 /* HTML PAGE  */
 
 .page-main{
-    height: 95vh;
+    height: auto%;
     width: 100vw;
     background-color: #F3F5F6;
     animation: page-fade-in 2s;
@@ -271,15 +277,29 @@ h1{
 }
 
 .left-nav{
-    flex: 250px;
+    position: fixed;
     min-width: 90px;
     background-color: white;
-    height: 100%;
-    overflow: auto;
+    overflow: scroll;
+    width: 250px;
     box-shadow: 10px 2px 25px lightgray;
     animation: left-nav-slide 1s;
     margin-left: 0;
+
+    display: block;
+
+    top: 65px;
+    bottom:0;
+    position:fixed;
+    overflow-y:scroll;
+    overflow-x:hidden;
 }
+
+.left-nav > a{
+    text-decoration: none;
+    color: black;
+}
+
 
 @keyframes left-nav-slide {
     from{
@@ -291,8 +311,10 @@ h1{
 }
 
 .nav-title{
+    position: relative;
     padding-top: 15px;
     color: white;
+    display: block;
     text-align: center;
     font-weight: 900;
     font-size: 50px;
@@ -309,7 +331,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#24daff', end
 
 
 .nav-title-CSS{
-    position: relative;
+    position: absolute;
     padding-top: 15px;
     color: white;
     text-align: center;
@@ -330,17 +352,18 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#24daff', end
     padding: 20px 20px;
     color: black;
     font-size: 20px;
+    display: block;
 }
 
-.left-nav > p:hover{
+.left-nav > a:hover p{
     background-color: lightgray;
 }
 
 .right-content{
-    flex: 90%;
-    color: white;
+    padding-left: 250px;
+    margin: 70px;
+    color: black;
     height: 100%;
-    overflow: auto;
 }
 
 @keyframes page-fade-in{
@@ -413,7 +436,6 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#24daff', end
     }
 
     .navbar{
-        position: absolute;
         padding: 20px 10px;
         right: 0;
         bottom: 0;
@@ -515,4 +537,56 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#24daff', end
     font-size: 20px;
 }
 
+}
+
+.grid-container{
+    display: block;
+}
+
+
+.project-image{
+    width: 500px;
+        display: inline-block;
+        margin-top: 30px;
+        margin-bottom: 40px;
+        position: relative;
+}
+
+.project-image > img{
+    width: 500px;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: .5s ease;
+    background-color: rgba(173, 173, 173, 0.71);
+  }
+
+  .text {
+    color: white;
+    font-weight: 200;
+    font-size: 30px;
+    position: absolute;
+    top: 45%;
+    width: 100%;
+    text-align: center;
+  }
+
+.project-image:hover .overlay {
+    opacity: 1;
+  }
+
+hr{
+    margin: 40px 0;
+    color: white;
+}
+
+.week{
 }
