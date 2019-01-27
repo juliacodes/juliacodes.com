@@ -1,3 +1,5 @@
 # juliacodes.com
-My portfolio website
-why is this what loads
+
+Portfolio Page for Julia Johnson,
+
+Programmed and Designed by Julia Johnson on November 2018
