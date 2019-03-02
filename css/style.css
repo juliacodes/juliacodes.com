@@ -198,7 +198,6 @@
 
 @keyframes nav-slide-in-mobile {
   0% {
-    background-color: transparent;
     width: 0px;
     opacity: 0; }
   100% {
