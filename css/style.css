@@ -245,7 +245,8 @@
 @media screen and (max-width: 680px) and (min-width: 370px) {
   .main-content {
     background-position: left;
-    padding: 30px; }
+    padding: 30px;
+    overflow-x: hidden; }
     .main-content .about-end {
       display: none; }
     .main-content .ham {
