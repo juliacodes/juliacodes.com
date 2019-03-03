@@ -326,6 +326,7 @@
     position: relative !important; }
   .main-content {
     overflow: scroll;
+    -webkit-overflow-scrolling: touch;
     overflow-x: hidden; }
   .project-container {
     margin-top: 100px;
@@ -340,13 +341,15 @@
   .about-end {
     display: none !important; }
   .main-content {
-    overflow: scroll; }
+    overflow: scroll;
+    -webkit-overflow-scrolling: touch; }
   .project-container {
     margin-top: 100px;
     height: 1400px;
     margin-bottom: 300px !important;
     position: relative;
     overflow: visible;
+    -webkit-overflow-scrolling: touch;
     width: 100%;
     right: unset; } }
 
@@ -384,6 +387,7 @@ a {
   width: 600px;
   height: 90%;
   overflow: scroll;
+  -webkit-overflow-scrolling: touch;
   position: absolute;
   top: 0;
   right: 34%; }
@@ -400,6 +404,7 @@ a {
     position: relative !important; }
   .main-content {
     overflow: scroll;
+    -webkit-overflow-scrolling: touch;
     overflow-x: hidden; }
   .about-container {
     margin-top: 100px;
@@ -407,6 +412,7 @@ a {
     margin-bottom: 180px !important;
     position: relative;
     overflow: visible;
+    -webkit-overflow-scrolling: touch;
     width: 100%;
     right: unset; } }
 
@@ -414,12 +420,15 @@ a {
   .about-end {
     display: none !important; }
   .main-content {
-    overflow: scroll; }
+    overflow: scroll;
+    overflow-x: hidden;
+    -webkit-overflow-scrolling: touch; }
   .about-container {
     margin-top: 100px;
     height: 1400px;
     margin-bottom: 300px !important;
     position: relative;
     overflow: visible;
+    -webkit-overflow-scrolling: touch;
     width: 60%;
     right: unset; } }
