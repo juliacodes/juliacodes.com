@@ -201,7 +201,7 @@
     width: 0px;
     opacity: 0; }
   100% {
-    width: 0px;
+    width: unset;
     opacity: 1; } }
 
 @keyframes nav-slide-out {
@@ -239,7 +239,8 @@
       width: 100%;
       animation: nav-slide-in-mobile .2s;
       right: -25px;
-      top: -420px; }
+      top: -420px;
+      z-index: 222; }
       .main-content .navbar p {
         font-size: 15px;
         transform: rotate(57deg) translate(220px, 220px);
@@ -251,7 +252,6 @@
 
 @media screen and (max-width: 680px) and (min-width: 370px) {
   .main-content {
-    overflow-x: hidden !important;
     background-position: left;
     padding: 30px; }
     .main-content .about-end {
