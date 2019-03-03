@@ -201,7 +201,6 @@
     width: 0px;
     opacity: 0; }
   100% {
-    width: unset;
     opacity: 1; } }
 
 @keyframes nav-slide-out {
@@ -238,7 +237,7 @@
     .main-content .navbar {
       width: 100%;
       animation: nav-slide-in-mobile .2s;
-      right: -25px;
+      left: 0;
       top: -420px;
       z-index: 222; }
       .main-content .navbar p {
@@ -269,7 +268,7 @@
     .main-content .navbar {
       width: 100%;
       animation: nav-slide-in-mobile .2s;
-      right: -75px;
+      left: 0;
       top: -520px; }
       .main-content .navbar p {
         font-size: 15px;
