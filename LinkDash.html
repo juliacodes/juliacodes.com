@@ -1,0 +1,222 @@
+
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:300,400,700" rel="stylesheet">
+  <title>JuliaCodes</title>
+  <!-- <meta name="description" content="The HTML5 Herald">
+  <meta name="author" content="SitePoint"> -->
+
+<style>
+    body{
+        font-family: 'Nunito Sans', sans-serif;
+        background-color: #F5F5F5;
+        width: 100vw;
+        overflow-x: hidden;
+    }
+
+    a{
+        color: black;
+    }
+
+    *{
+        padding: 0;
+        position: static;
+        margin: 0;
+        overflow-x: hidden;
+    }
+
+    header, footer{
+        background: url(background.png);
+        background-repeat:no-repeat;
+        background-size: 100%;
+        height: 150px;
+        width: 100%;
+        padding: 15px;
+        margin: 0;
+        overflow-x: hidden;
+    }
+
+    footer{
+        transform: rotate(180deg);
+        bottom: 0;
+    }
+
+    h1{
+        margin-top: 20px;
+        color: white;
+        font-weight: bold;
+         
+    }
+
+    header > p{
+        margin-top: 3px;
+        color: white;
+        font-weight: 100;
+    }
+
+    .majorLinks{
+        display: flex;
+        width: 90%;
+        margin: 0 auto;
+        justify-content: space-evenly; 
+    }
+
+    .flexLink{
+        margin: 35px 5px;
+        width: 33.33%;
+        height: 40px;
+        background-color: white;
+        font-size: 15px;
+        border: none;
+        border-radius: 30px;
+        box-shadow: 0px 0px 10px rgba(99, 99, 99, 0.184);
+        -webkit-box-shadow: 0px 0px 10px rgba(99, 99, 99, 0.184);
+        -moz-box-shadow:    0px 0px 10px rgba(99, 99, 99, 0.184);
+    }
+
+    ::-webkit-scrollbar{
+	    width: 0px;
+    }
+
+    ::-webkit-scrollbar-track-piece{
+	    background-color: transparent;
+	    -webkit-border-radius: 6px;
+    }
+
+    .books{
+        position: relative;
+        overflow-x: scroll;
+        overflow-y: hidden;
+        white-space: nowrap;
+        -webkit-overflow-scrolling: touch;
+    }
+
+
+    .bookCover{
+        position: relative;
+        display: inline-block;
+        margin: 10px;
+        width: 150px;
+        border-radius: 10px;
+        box-shadow: 0px 0px 10px rgba(99, 99, 99, 0.184);
+        -webkit-box-shadow: 0px 0px 10px rgba(99, 99, 99, 0.184);
+        -moz-box-shadow:    0px 0px 10px rgba(99, 99, 99, 0.184);
+    }
+
+    
+
+    h2{
+        margin: 20px 0 20px 40px;
+        font-weight: 300;
+        font-size: 16px;
+    }
+
+    .linkContainer{
+        display: block;
+        width: 80%;
+        height: 310px;
+        
+        background-color: white;
+        padding: 5px;
+        margin: 20px auto 40px auto;
+        border-radius: 15px;
+        box-shadow: 0px 0px 10px rgba(99, 99, 99, 0.184);
+        -webkit-box-shadow: 0px 0px 10px rgba(99, 99, 99, 0.184);
+        -moz-box-shadow:    0px 0px 10px rgba(99, 99, 99, 0.184);
+    }
+
+    .numCircle{
+        margin: 20px 10px;
+        border: 2px solid #FF414D;
+        color: #FF414D;
+        padding: 3px 9.5px;
+        width: 10px;
+        text-align: center;
+        border-radius: 100px;
+        display: inline-block;
+    }
+
+    h3{
+        width: 230px;
+        font-size: 14px;
+        line-height: 30px;
+        font-weight: 400;
+        display: inline-block;
+    }
+
+    .altText{
+        display: inline-block;
+        font-size: 10px;
+        margin-top: -10px;
+        color: darkgray;
+    }
+    
+
+
+</style>
+
+
+</head>
+<body onload="bookScroll();">
+<div class="unscroll">
+    <header>
+    <h1>juliacodes</h1>
+    <p>Dashboard</p>
+    </header>
+
+    <div class="majorLinks">
+        <button class="flexLink">Portfolio</button>
+        <button class="flexLink">Email</button>
+        <button class="flexLink">LinkedIn</button>
+    </div>
+</div>
+
+    <div id="books" class="books">
+        <a href="https://amzn.to/2Xyge5N"><img src="javascript&jquery.png" class="bookCover"/></a>
+        <a href="https://amzn.to/2DsCINP"><img src="creative.png" class="bookCover"/></a>
+        <a href="https://amzn.to/2VVGwOJ"><img src="maximize.png" class="bookCover"/></a>
+        <a href="https://amzn.to/2DoYfH3"><img src="html&css.png" class="bookCover"/></a>
+        <a href="https://amzn.to/2ILdRZ5"><img src="youdontknow.png" class="bookCover"/></a>
+        <a href="https://amzn.to/2GsS3yN"><img src="theartofdoing.png" class="bookCover"/></a>
+    </div> 
+
+    <div class="exLinks">
+        <h2>External Links</h2>
+        <div class="linkContainer">
+            <div class="link">
+                <span class="numCircle">1</span>
+                <a href="https://codepen.io/juliaa_johnsonn/pen/ejGdRg"><h3>Simple Timer with Javascript <br/><span class="altText">CodePen</span></h3></a>
+                 
+            </div>
+            <div class="link">
+                <span class="numCircle">2</span>
+                <a href="https://medium.com/@juliacodes/managing-your-time-as-a-programming-college-student-5cabf36506ce?source=---------2------------------"><h3>Managing Your Day as a Coder<br/><span class="altText">Medium</span></h3></a>
+            </div>
+            <div class="link">
+                <span class="numCircle">3</span>
+                <a href=""><h3>Chrome Extension<br/><span class="altText">Coming Soon</span></h3></a>
+            </div>   
+            <div class="link">
+                <span class="numCircle">4</span>
+                <a href="https://codepen.io/juliaa_johnsonn/pen/OwzJMW"><h3>Random Color Generator<br/><span class="altText">Codepen</span></h3></a>
+            </div>  
+        </div>
+    </div>
+    
+
+    <footer/>
+</body>
+<script type="text/javascript">
+    function bookScroll() {
+        var el = document.getElementById("books"); // Or whatever method to get the element
+
+        // To set the scroll
+        el.scrollTop = 0;
+        el.scrollLeft = 70;
+    }
+</script>
+</html>
