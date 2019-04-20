@@ -28,8 +28,87 @@
         margin: 0;
         overflow-x: hidden;
     }
+	
+.back{
+        z-index: -1;
+        position: absolute;
+        margin: 0;
+        padding: 0;
+        top: 0;
+        left: 0;
+        width: 100%;
+    }
 
-    header, footer{
+    .image3{
+        animation: image3RiseFall  2s infinite ;
+        transform: translate(0);
+    }
+
+    .image2{
+        animation: image2RiseFall  3s infinite ;
+        transform: translate(0);
+    }
+
+    .image1{
+        animation: image1RiseFall  3s infinite ;
+        transform: translate(0);
+    }
+
+    @keyframes image3RiseFall {
+        0%{
+            transform: translateY(0);
+        }
+
+        50%{
+            transform: translateY(7px);
+        }
+
+        100%{
+            transform: translateY(0px);
+            
+        }
+    }
+
+    @keyframes image2RiseFall {
+        0%{
+            transform: translateY(0);
+        }
+
+        50%{
+            transform: translateY(-8px);
+        }
+
+        100%{
+            transform: translateY(0px);
+            
+        }
+    }
+
+
+    @keyframes image1RiseFall {
+        0%{
+            transform: translateY(0);
+        }
+
+        50%{
+            transform: translateY(-5px);
+        }
+
+        100%{
+            transform: translateY(0px);
+            
+        }
+    }
+
+    header{
+        height: 150px;
+        width: 100%;
+        padding: 15px;
+        margin: 0;
+        overflow-x: hidden;
+    }
+
+    footer{
         background: url(LinkDashImages/background.png);
         background-repeat:no-repeat;
         background-size: 100%;
@@ -38,12 +117,11 @@
         padding: 15px;
         margin: 0;
         overflow-x: hidden;
-    }
-
-    footer{
-        transform: rotate(180deg);
+	transform: rotate(180deg);
         bottom: 0;
     }
+
+    
 
     h1{
         margin-top: 20px;
@@ -165,6 +243,11 @@
 <body onload="bookScroll();">
 <div class="unscroll">
     <header>
+        <img class="back image4"src="LinkDashImages/back4Artboard 1.png"/>
+        <img class="back image3" src="LinkDashImages/back3Artboard 1.png"/>
+        <img class="back image2" src="LinkDashImages/back2Artboard 1.png"/>
+        <img class="back image1" src="LinkDashImages/back1Artboard 1.png"/>
+
     <h1>juliacodes</h1>
     <p>Dashboard</p>
     </header>
